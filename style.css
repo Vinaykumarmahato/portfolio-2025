@@ -271,14 +271,16 @@ section:last-of-type {
     border-bottom: none;
 }
 
-/* --- Navbar Styling --- */
+/* =================================================================
+   MAIN NAVBAR STYLES (Desktop View)
+   ================================================================= */
 .navbar {
     background-color: var(--bg-light);
-    padding: 15px 0; /* More vertical padding */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    padding: 15px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure it stays on top */
+    z-index: 1000;
 }
 
 .nav-container {
@@ -291,18 +293,18 @@ section:last-of-type {
 }
 
 .site-logo {
-  font-family: cursive; /* cursive font */
-  text-decoration: none; /* Remove underline */
-  color: white; /* Base text color */
-  font-size: 2em; /* Adjust size as needed */
-  text-shadow:
-    0 0 5px #fff, /* White glow */
-    0 0 10px #fff,
-    0 0 15px #007bff, /* Blue lighting effect */
-    0 0 20px #007bff,
-    0 0 25px #007bff,
-    0 0 30px #007bff,
-    0 0 35px #007bff;
+    font-family: cursive;
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #007bff,
+        0 0 20px #007bff,
+        0 0 25px #007bff,
+        0 0 30px #007bff,
+        0 0 35px #007bff;
 }
 
 .nav-links {
@@ -310,28 +312,18 @@ section:last-of-type {
     margin: 0;
     padding: 0;
     display: flex;
-
-
+    align-items: center;
 }
-
-.nav-links::-webkit-scrollbar {
-  width: 4px;
-}
-.nav-links::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px;
-}
-
 
 .nav-links li {
-    margin-left: 35px; /* More space between links */
+    margin-left: 35px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-dark);
-    font-weight: 600; /* Bolder links */
-    padding-bottom: 7px; /* For the underline effect */
+    font-weight: 600;
+    padding-bottom: 7px;
     position: relative;
     transition: color var(--transition-speed-sm);
 }
@@ -340,17 +332,12 @@ section:last-of-type {
     content: '';
     position: absolute;
     width: 0;
-    height: 4px; /* Thicker underline */
-    background-color: var(--accent-color); /* Green underline */
+    height: 4px;
+    background-color: var(--accent-color);
     bottom: 0;
     left: 0;
     transition: width var(--transition-speed-md) ease-in-out;
     border-radius: var(--border-radius-sm);
-}
-
-.nav-links a:hover::after,
-.nav-links a.active-link::after { /* Add active class for current section */
-    width: 100%;
 }
 
 .nav-links a:hover,
@@ -358,12 +345,30 @@ section:last-of-type {
     color: var(--primary-color);
 }
 
-/* Hamburger Menu Button */
+.nav-links a:hover::after,
+.nav-links a.active-link::after {
+    width: 100%;
+}
+
+
+/* Custom scrollbar (desktop par koi effect nahi karega jab tak overflow na ho) */
+.nav-links::-webkit-scrollbar {
+    width: 4px;
+}
+.nav-links::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+
+/* =================================================================
+   HAMBURGER MENU TOGGLE BUTTON
+   ================================================================= */
 .menu-toggle {
-    display: none;
+    display: none; /* Desktop par hide rahega */
     background: none;
     border: none;
-    font-size: 28px; /* Larger icon */
+    font-size: 28px;
     cursor: pointer;
     color: var(--text-dark);
     transition: transform var(--transition-speed-sm);
@@ -373,52 +378,66 @@ section:last-of-type {
     transform: scale(1.1);
 }
 
-/* Media Queries for Navbar Responsiveness */
+
+/* =================================================================
+   RESPONSIVE STYLES (Mobile and Tablet View)
+   ================================================================= */
 @media (max-width: 991px) {
+
+    /* Hamburger menu ko show karein */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Nav links ko dropdown menu ki tarah banayein */
     .nav-links {
-        display: none;
+        display: none; /* Shuru mein menu hide rahega */
         flex-direction: column;
         position: absolute;
-        top: 75px; /* Adjust based on navbar height */
+        top: 75px; /* Navbar ki height ke neeche se shuru ho */
         left: 0;
         width: 100%;
         background-color: var(--bg-light);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         z-index: 999;
-        padding: 20px 0;
+        padding: 10px 0;
         border-bottom-left-radius: var(--border-radius-lg);
         border-bottom-right-radius: var(--border-radius-lg);
+
+        /* === SCROLL FIX WALA CODE === */
+        max-height: calc(100vh - 75px);
+        overflow-y: auto;
     }
 
+    /* JavaScript se 'active' class add hone par menu ko dikhayein */
     .nav-links.active {
         display: flex;
     }
 
+    /* Mobile menu ke list items */
     .nav-links li {
         margin: 0;
+        width: 100%;
         text-align: center;
-        padding: 12px 0;
     }
 
+    /* Mobile menu ke links */
     .nav-links a {
         display: block;
-        padding: 10px 20px;
-        color: var(--text-dark); /* Ensure readable on white background */
+        padding: 15px 20px; /* Thoda zyada padding */
+        width: 100%;
+        color: var(--text-dark);
     }
 
     .nav-links a::after {
-        background-color: var(--primary-color); /* Use primary for mobile underline */
-    }
-
-    .menu-toggle {
-        display: block;
+        background-color: var(--primary-color); /* Underline ka color */
     }
 }
 
 /* --- Hero Section (re-aligning with current HTML structure, used "hero" class) --- */
 .hero {
     position: relative;
-    background: linear-gradient(135deg, #2b2cf2, #1e1ef5);
+    background: #001F3F	; /* Solid charcoal gray */
     padding: 100px 0; /* Use section padding */
     border-radius: 0; /* Remove top-level border-radius, container will handle if needed */
     overflow: hidden;
@@ -510,39 +529,114 @@ section:last-of-type {
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
 }
-
-/* Social Icons */
+/* ------------------------------------------------------------- */
+/* NEW: Responsive Social Icons Styling */
+/* ------------------------------------------------------------- */
 .social-icons {
-    margin-top: 30px; /* More space */
     display: flex;
-    gap: 20px; /* Larger gap */
-    flex-wrap: wrap;
-    justify-content: flex-start; /* Align left */
+    justify-content: flex-start; /* Changed to flex-start to align with text */
+    gap: 20px; /* Space between icons */
+    margin-top: 30px; /* Adjusted margin to provide more space from text */
+    flex-wrap: wrap; /* Allow icons to wrap onto the next line on smaller screens */
+    /* Added negative margin-left to shift it further left on larger screens for visual alignment with text */
+    margin-left: -5px; /* Adjust this value as needed for visual alignment with text */
 }
 
 .social-icons a {
-    display: block; /* Make the whole area clickable */
+    position: relative;
+    /* Use clamp for responsive sizing: min-size, viewport-relative, max-size */
+    width: clamp(40px, 8vw, 50px);
+    height: clamp(40px, 8vw, 50px);
+    display: inline-block;
+    transition: transform 0.3s ease-out; /* Smooth transition for hover */
 }
 
-.social-icons a img {
-    width: 48px; /* Larger icons */
-    height: 48px;
-    border-radius: var(--border-radius-md);
-    transition: transform var(--transition-speed-md), box-shadow var(--transition-speed-md);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
-    padding: 5px; /* Small padding inside for better visual */
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(2px);
+.social-icons a:hover {
+    transform: translateY(-5px) scale(1.05); /* Subtle lift and scale on hover */
 }
 
-.social-icons a:hover img {
-    transform: scale(1.15) rotate(3deg);
-    box-shadow: 0 0 20px #00fff2, 0 0 5px #ff00c8; /* Dual glow effect */
+.social-icons a::before {
+    content: "";
+    position: absolute;
+    top: -5px; /* Position the animated border around the icon */
+    left: -5px;
+    /* Use calc for responsive sizing of the border based on the icon's clamped size */
+    width: calc(clamp(40px, 8vw, 50px) + 10px); /* Icon width + 10px padding */
+    height: calc(clamp(40px, 8vw, 50px) + 10px); /* Icon height + 10px padding */
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top: 2px solid #00f2ff;
+    border-right: 2px solid #ff00d4;
+    border-bottom: 2px solid #00ff87;
+    border-left: 2px solid #ffd000;
+    animation: spin 2s linear infinite;
+    z-index: 1; /* Ensure border is below the image but above background */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
+
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 5px; /* Padding inside the icon's background */
+    background-color: white; /* White circular background for the icon */
+    z-index: 2; /* Ensure the image is above the animated border */
+    position: relative; /* Needed for z-index to work */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Queries for even more refined responsiveness of social icons */
+@media (max-width: 768px) {
+    .social-icons {
+        gap: 15px; /* Reduce gap on smaller screens */
+        margin-left: 0; /* Reset negative margin on smaller screens if not needed */
+    }
+    .social-icons a {
+        /* Adjust base size for tablets */
+        width: clamp(35px, 7vw, 45px);
+        height: clamp(35px, 7vw, 45px);
+    }
+    .social-icons a::before {
+        width: calc(clamp(35px, 7vw, 45px) + 10px);
+        height: calc(clamp(35px, 7vw, 45px) + 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        gap: 10px; /* Further reduce gap on very small screens */
+        margin-left: 0; /* Reset negative margin on very small screens */
+    }
+    .social-icons a {
+        /* Adjust base size for mobile */
+        width: clamp(30px, 6vw, 40px);
+        height: clamp(30px, 6vw, 40px);
+    }
+    .social-icons a::before {
+        width: calc(clamp(30px, 6vw, 40px) + 10px);
+        height: calc(clamp(30px, 6vw, 40px) + 10px);
+    }
+}
+
 
 /* Call to Action Button (re-using .cta-button) */
 .hero__text .btn-connect {
     margin-top: 60px; /* More margin */
+    display: inline-block; /* Ensure padding and margin work */
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all var(--transition-speed-md) ease;
     background: linear-gradient(to right, #b9ffce, #8bffc7);
     color: var(--text-dark); /* Ensure contrast */
     box-shadow: 0 0 20px rgba(0, 255, 204, 0.6); /* Brighter initial glow */
@@ -551,6 +645,7 @@ section:last-of-type {
 .hero__text .btn-connect:hover {
     background: linear-gradient(to right, #92f8bb, #66ffcc);
     box-shadow: 0 0 35px rgba(0, 255, 204, 0.8);
+    transform: translateY(-3px);
 }
 
 /* Pulse Animation */
@@ -564,15 +659,31 @@ section:last-of-type {
     100% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0); }
 }
 
-/* Image Animation */
-.hero__image {
-    flex: 1 1 40%;
-    z-index: 2;
-    animation: floatUpDown 3.5s ease-in-out infinite; /* Slower, smoother float */
+/* --- Start of new/modified CSS for flying elements --- */
+
+/* Wrapper for the image and flying elements */
+.hero__image-container {
+    position: relative; /* Crucial for positioning absolute children */
+    flex: 1 1 40%; /* Maintain original flex sizing */
+    z-index: 2; /* Keep it above background decorations */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px; /* Inner padding for shadow */
+    /* On smaller screens, flex-direction is column, so this padding adjusts */
+    margin-bottom: 0; /* Ensure no extra margin if previously defined on .hero__image */
+}
+
+/* Image Animation (now applies to the img directly, but the container also floats) */
+.hero__image {
+    position: relative; /* To ensure image stays above flying elements */
+    animation: floatUpDown 3.5s ease-in-out infinite; /* Slower, smoother float */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure the image is above the flying elements, but below flying elements */
+    /* Remove flex, padding, and direct sizing from .hero__image here if it conflicts with .hero__image-container */
+    /* The .hero__image-container will manage the overall sizing and flex distribution */
 }
 
 .hero__image img {
@@ -616,6 +727,158 @@ section:last-of-type {
     transform-origin: 70% 70%; /* Rotate from hand base */
 }
 
+/* --- Flying Elements Styling and Animations --- */
+.flying-element {
+    position: absolute;
+    width: 40px; /* Base size */
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    z-index: 3; /* Changed to 3 so they appear above the image */
+    pointer-events: none; /* Prevent interaction */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /* Transform origin for rotations to be centered */
+    transform-origin: center center;
+}
+
+/* Butterfly specific styling and animation */
+.butterfly {
+    /* Using emoji placeholder images for demonstration */
+    /* IMPORTANT: Replace with your actual butterfly image URL for best results */
+    background-image: url('https://placehold.co/40x40/FFD700/000000?text=%F0%9F%A6%8B'); /* Gold butterfly emoji */
+    animation-name: flyButterfly;
+    animation-duration: calc(8s + var(--random-duration)); /* Longer duration, randomized */
+    animation-direction: alternate;
+}
+
+@keyframes flyButterfly {
+    0% {
+        transform: translate(var(--start-x), var(--start-y)) scale(0.8) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.9; /* Faster fade in */
+    }
+    25% {
+        opacity: 1;
+        transform: translate(calc(var(--start-x) + var(--path-offset-x-1)), calc(var(--start-y) + var(--path-offset-y-1))) scale(1.1) rotate(45deg);
+    }
+    75% {
+        opacity: 1; /* Stay fully opaque longer */
+        transform: translate(calc(var(--start-x) + var(--path-offset-x-3)), calc(var(--start-y) + var(--path-offset-y-3))) scale(0.9) rotate(135deg);
+    }
+    90% {
+        opacity: 0.9; /* Slower fade out */
+    }
+    100% {
+        transform: translate(var(--end-x), var(--end-y)) scale(0.8) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+/* Star specific styling and animation */
+.star {
+    /* Using emoji placeholder images for demonstration */
+    /* IMPORTANT: Replace with your actual star image URL for best results */
+    background-image: url('https://placehold.co/30x30/FFFFFF/000000?text=%E2%AD%90'); /* White star emoji */
+    width: 30px;
+    height: 30px;
+    animation-name: flyStar;
+    animation-duration: calc(6s + var(--random-duration)); /* Randomized duration */
+    animation-direction: normal; /* Stars just fly through */
+}
+
+@keyframes flyStar {
+    0% {
+        transform: translate(var(--start-x), var(--start-y)) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.9; /* Faster fade in */
+    }
+    40% { opacity: 1; } /* Stay opaque */
+    60% { opacity: 1; } /* Stay opaque */
+    85% {
+        opacity: 0.9; /* Slower fade out */
+    }
+    100% {
+        transform: translate(var(--end-x), var(--end-y)) scale(1.2) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Individual positioning and animation properties for each flying element */
+/* Butterfly 1 */
+.flying-element:nth-child(2) { /* Corresponds to the first .flying-element inside .hero__image-container */
+    --start-x: -180px; /* Start further left */
+    --start-y: -120px; /* Start further up */
+    --end-x: 180px; /* End further right */
+    --end-y: 120px; /* End further down */
+    --random-duration: 0s;
+    --path-offset-x-1: 50px; --path-offset-y-1: 150px;
+    --path-offset-x-2: 100px; --path-offset-y-2: 0px;
+    --path-offset-x-3: 20px; --path-offset-y-3: -80px;
+    animation-delay: 0s;
+}
+
+/* Butterfly 2 */
+.flying-element:nth-child(3) {
+    --start-x: 150px; /* Start further right */
+    --start-y: 180px; /* Start further down */
+    --end-x: -150px; /* End further left */
+    --end-y: -80px; /* End further up */
+    --random-duration: 2s;
+    --path-offset-x-1: -80px; --path-offset-y-1: -100px;
+    --path-offset-x-2: 0px; --path-offset-y-2: -150px;
+    --path-offset-x-3: 70px; --path-offset-y-3: -20px;
+    animation-delay: 2s;
+}
+
+/* Butterfly 3 */
+.flying-element:nth-child(4) {
+    --start-x: -100px; /* Start further left */
+    --start-y: 150px; /* Start further down */
+    --end-x: 100px; /* End further right */
+    --end-y: -150px; /* End further up */
+    --random-duration: 1s;
+    --path-offset-x-1: 100px; --path-offset-y-1: 50px;
+    --path-offset-x-2: -30px; --path-offset-y-2: 120px;
+    --path-offset-x-3: 80px; --path-offset-y-3: -50px;
+    animation-delay: 4s;
+}
+
+/* Star 1 */
+.flying-element:nth-child(5) {
+    --start-x: -250px; /* Start very far left */
+    --start-y: 0px;
+    --end-x: 250px; /* End very far right */
+    --end-y: 0px;
+    --random-duration: 0.5s;
+    animation-delay: 0.5s;
+}
+
+/* Star 2 */
+.flying-element:nth-child(6) {
+    --start-x: 0px;
+    --start-y: -250px; /* Start very far up */
+    --end-x: 0px;
+    --end-y: 250px; /* End very far down */
+    --random-duration: 1.5s;
+    animation-delay: 1.5s;
+}
+
+/* Star 3 */
+.flying-element:nth-child(7) {
+    --start-x: 250px; /* Start very far right */
+    --start-y: -120px;
+    --end-x: -250px; /* End very far left */
+    --end-y: 120px;
+    --random-duration: 2.5s;
+    animation-delay: 3s;
+}
+
 /* --- Responsive Hero --- */
 @media (max-width: 991px) { /* Tablet and smaller */
     .hero__content {
@@ -633,14 +896,15 @@ section:last-of-type {
         justify-content: center;
     }
 
-    .hero__image {
+    /* Target the new container for responsive ordering */
+    .hero__image-container {
         flex: 1 1 100%;
         order: -1; /* Move image above text on smaller screens */
     }
 
     .hero__image img {
         max-width: 80%; /* Adjust image size for smaller screens */
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Add back margin for spacing with text below */
     }
 
     .hero__decor-circle,
@@ -661,6 +925,12 @@ section:last-of-type {
 
     .hero__image img {
         max-width: 95%; /* Even smaller image for very small screens */
+    }
+
+    /* Adjust flying elements for smaller screens if they become too large or distracting */
+    .flying-element {
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -730,7 +1000,7 @@ section:last-of-type {
 /* About Section Image */
 .about-section .about-image {
     display: block;
-    max-width: 600px; /* Fixed max-width for better control */
+    max-width: 861px; /* Fixed max-width for better control */
     width: 90%; /* Responsive width */
     height: auto;
     border-radius: var(--border-radius-lg);
@@ -1173,10 +1443,16 @@ section:last-of-type {
         padding-left: 25px;
     }
 }
-
 /* --- Webinars, Workshops & Guest Lectures --- */
 .webinars-section {
     background-color: var(--bg-light);
+    padding: 100px 0; /* Ensuring consistent section padding */
+}
+
+.webinars-section .container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 25px;
 }
 
 .webinars-section .section-intro {
@@ -1187,6 +1463,27 @@ section:last-of-type {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.webinars-section h2 {
+    text-align: center;
+    margin-bottom: 3.5rem; /* Consistent with other h2 styles */
+    position: relative;
+    padding-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.webinars-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
 }
 
 .webinars-section h3 {
@@ -1215,7 +1512,7 @@ section:last-of-type {
 .upcoming-events-grid,
 .past-events-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted minmax for better image fit */
     gap: 35px;
     margin-top: 40px;
     margin-bottom: 60px;
@@ -1231,6 +1528,7 @@ section:last-of-type {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--border-color);
+    height: auto; /* Allow height to adjust based on content */
 }
 
 .event-card:hover,
@@ -1242,16 +1540,29 @@ section:last-of-type {
 .event-card img,
 .guest-lecture-card img {
     width: 100%;
-    height: 200px; /* Consistent height */
-    object-fit: cover;
+    height: 400px; /* Increased height for event thumbnails */
+    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
     border-bottom: 1px solid var(--border-color);
 }
 
 .guest-lecture-card .college-logo {
-    height: 80px; /* Make college logos more prominent */
-    object-fit: contain;
-    padding: 15px; /* Add padding for visual spacing */
+    /* For college logos, if they are meant to be smaller banners or actual logos */
+    height: 352px; /* Increased height to accommodate full image content if needed */
+    object-fit: cont
+    ain; /* Ensures the entire logo is visible, might leave empty space */
+    padding: 10px; /* Add padding for visual spacing */
+    background-color: #f8f8f8; /* A light background for logos if they have transparency */
 }
+
+/* If you want specific images to fill the space regardless of aspect ratio, use cover */
+/* If you want to ensure the entire image is seen, even if it leaves empty space, use contain */
+/* For 'prase college.jpg' and similar photos, 'cover' might be better for uniformity */
+.guest-lecture-card img[src*="prase college.jpg"] {
+    object-fit: cover;
+    height: 352px; /* Make sure these images fill the card header like event thumbnails */
+    padding: 0; /* Remove padding if it's a full image */
+}
+
 
 .event-card h4,
 .guest-lecture-card h4 {
@@ -1259,6 +1570,7 @@ section:last-of-type {
     color: var(--primary-color);
     padding: 20px 25px 10px;
     margin-bottom: 0;
+    flex-grow: 0; /* Prevent title from taking too much space */
 }
 
 .event-card p,
@@ -1268,7 +1580,14 @@ section:last-of-type {
     padding: 0 25px;
     margin-bottom: 10px;
     line-height: 1.6;
+    flex-grow: 1; /* Allow description to take available space */
 }
+
+.event-card p:last-of-type,
+.guest-lecture-card p.event-description {
+    margin-bottom: 15px; /* More space before the link */
+}
+
 
 .event-card strong {
     color: var(--accent-color);
@@ -1281,10 +1600,11 @@ section:last-of-type {
     color: var(--text-light);
     padding: 10px 20px;
     border-radius: var(--border-radius-md);
-    margin: 20px 25px 25px;
+    margin: 0 25px 25px; /* Adjust margin to push it to the bottom */
     font-size: 0.9rem;
     font-weight: 600;
     transition: background-color var(--transition-speed-sm), transform var(--transition-speed-sm);
+    align-self: flex-start; /* Align button to the start of its flex container */
 }
 
 .event-card .event-link:hover,
@@ -1328,116 +1648,20 @@ section:last-of-type {
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* --- Certifications & Key Accomplishments --- */
-.certificates-section {
-    background-color: var(--bg-medium);
+/* Responsive adjustments for webinar section */
+@media (max-width: 768px) {
+    .upcoming-events-grid,
+    .past-events-grid {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+
+    .event-card,
+    .guest-lecture-card {
+        margin: 0 auto; /* Center single cards */
+        max-width: 400px; /* Limit width for single cards */
+    }
 }
 
-.certificates-section .section-intro {
-    font-size: 1.15rem;
-    text-align: center;
-    margin-bottom: 60px;
-    color: var(--secondary-color);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.certificates-grid,
-.awards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly smaller min-width for more cards */
-    gap: 30px;
-    margin-bottom: 60px;
-}
-
-.certificate-card,
-.award-item {
-    background-color: var(--bg-light);
-    padding: 30px;
-    border-radius: var(--border-radius-lg);
-    box-shadow: 0 8px 25px var(--shadow-light);
-    text-align: center;
-    border-top: 6px solid var(--primary-color);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* Distribute content */
-    min-height: 250px; /* Ensure cards have similar height */
-}
-
-.certificate-card:hover,
-.award-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px var(--shadow-medium);
-    border-color: var(--accent-color);
-}
-
-.certificate-card .cert-logo,
-.award-item .award-icon {
-    width: 80px; /* Larger icons */
-    height: 80px;
-    margin-bottom: 20px;
-    object-fit: contain;
-    filter: grayscale(80%) drop-shadow(0 0 5px rgba(0,0,0,0.1));
-    transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.certificate-card:hover .cert-logo,
-.award-item:hover .award-icon {
-    filter: grayscale(0%) drop-shadow(0 0 10px var(--primary-color));
-    transform: scale(1.15);
-}
-
-.certificate-card h4,
-.award-item h3 {
-    font-size: 1.4rem;
-    color: var(--text-dark);
-    margin-bottom: 10px;
-    line-height: 1.3;
-}
-
-.certificate-card .issuer,
-.award-item p {
-    font-size: 0.95rem;
-    color: var(--secondary-color);
-    margin-bottom: 8px;
-    flex-grow: 1; /* Allow text to grow */
-}
-
-.certificate-card .date {
-    font-size: 0.85rem;
-    color: var(--secondary-color);
-    margin-top: 5px;
-    margin-bottom: 15px; /* More space before link */
-}
-
-.award-item .award-note {
-    font-style: italic;
-    font-size: 0.8rem;
-    color: #dc3545;
-    margin-top: 10px;
-    font-weight: 500;
-}
-
-.certificate-card .view-cert {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 8px 18px;
-    border-radius: var(--border-radius-md);
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-top: auto; /* Push to bottom */
-    transition: background-color var(--transition-speed-sm), transform var(--transition-speed-sm);
-}
-
-.certificate-card .view-cert:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-2px);
-    text-decoration: none;
-}
 
 /* --- Thought Leadership / YouTube Section --- */
 .youtube-section {
@@ -1554,96 +1778,464 @@ section:last-of-type {
     text-decoration: none;
 }
 
-/* --- Testimonials Section --- */
-.testimonials-section {
-    background-color: var(--bg-light);
-}
+ /* Testimonials Section Styles (Enhanced) */
+        .testimonials-section {
+            background: #ffffff; /* Clean white background */
+            padding: 60px 0; /* Removed horizontal padding from here */
+            border-radius: 24px; /* More prominent rounded corners */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Deeper, softer shadow */
+            overflow: hidden; /* Important for the scrolling list */
+            color: #2d3748; /* Darker text color */
+            max-width: 100%; /* Changed to 100% to fill available width */
+            margin: 0 auto; /* Center the section */
+            position: relative; /* For scroll buttons positioning */
+            width: 100%; /* Ensure it takes full width */
+        }
 
-.testimonials-section .section-intro {
-    font-size: 1.15rem;
-    text-align: center;
-    margin-bottom: 60px;
-    color: var(--secondary-color);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
+        .testimonials-section h2 {
+            text-align: center;
+            font-size: 3rem; /* Larger and more impactful heading */
+            font-weight: 700; /* Bolder */
+            margin-bottom: 50px; /* More space below heading */
+            color: #1a202c; /* Very dark text for heading */
+            position: relative;
+            padding-bottom: 15px; /* Space for the underline effect */
+            padding-left: 20px; /* Add padding to heading for better spacing */
+            padding-right: 20px; /* Add padding to heading for better spacing */
+        }
 
-.testimonials-section .testimonials-header-image {
-    display: block;
-    max-width: 70%;
-    height: auto;
-    border-radius: var(--border-radius-lg);
-    margin: 30px auto 60px;
-    box-shadow: 0 10px 30px var(--shadow-medium);
-    border: 2px solid var(--border-color);
-    transition: transform 0.4s ease-in-out;
-}
+        .testimonials-section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 100px; /* Wider underline */
+            height: 5px; /* Thicker underline */
+            background-color: #8b5cf6; /* Vibrant purple accent */
+            border-radius: 3px;
+        }
 
-.testimonials-section .testimonials-header-image:hover {
-    transform: scale(1.02);
-}
+        .scroll-wrapper {
+            position: relative;
+            /* Adjust padding to control how much space the buttons take, or make it 0 if buttons are outside */
+            padding: 0 50px; /* Space for scroll buttons */
+        }
 
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-}
+        .testimonial-track {
+            overflow: hidden;
+            position: relative;
+        }
 
-.testimonial-card {
-    background-color: var(--bg-medium); /* Slightly darker background for contrast */
-    border-radius: var(--border-radius-lg);
-    box-shadow: 0 10px 30px var(--shadow-light);
-    padding: 35px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-    border: 1px solid var(--border-color);
-}
+        .testimonial-grid {
+            display: flex;
+            gap: 30px; /* Increased gap between cards */
+            animation: scroll-left 40s linear infinite; /* Faster scroll, adjust as needed */
+            width: max-content; /* Allows horizontal scrolling */
+            padding: 10px 0; /* Vertical padding */
+            white-space: nowrap; /* Prevent cards from wrapping */
+            justify-content: flex-start; /* Align items to the start */
+            padding-left: 20px; /* Add padding to the start of the grid */
+            padding-right: 20px; /* Add padding to the end of the grid */
+        }
 
-.testimonial-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 50px var(--shadow-medium);
-}
+        .testimonial-grid:hover {
+            animation-play-state: paused; /* Pause animation on hover */
+        }
 
-.testimonial-card .testimonial-image {
-    width: 90px; /* Larger image */
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 25px;
-    border: 3px solid var(--primary-color);
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
+        .testimonial-card {
+            background: #fdfdff; /* Very light, subtle background for cards */
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Enhanced shadow */
+            flex: 0 0 320px; /* Slightly wider cards */
+            padding: 30px; /* More padding inside cards */
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+            border: 1px solid #e0e7ff; /* Soft border */
+            display: flex; /* Flexbox for internal content */
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between; /* Distribute space */
+            min-height: 280px; /* Ensure consistent card height */
+        }
 
-.testimonial-card:hover .testimonial-image {
-    transform: scale(1.08);
-    border-color: var(--accent-color);
-}
+        .testimonial-card:hover {
+            transform: translateY(-8px); /* Lift effect on hover */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+        }
 
-.testimonial-card blockquote {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: var(--text-dark);
-    margin-bottom: 25px;
-    line-height: 1.7;
-    flex-grow: 1; /* Allow quote to take space */
-}
+        .testimonial-image {
+            border-radius: 50%;
+            width: 90px; /* Slightly larger image */
+            height: 90px;
+            object-fit: cover;
+            margin-bottom: 20px; /* More space below image */
+            border: 4px solid #8b5cf6; /* Vibrant purple border */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow for image */
+        }
 
-.testimonial-card .author {
-    font-size: 1rem;
-    color: var(--secondary-color);
-    font-weight: 500;
-}
+        .testimonial-card blockquote {
+            font-size: 1.05rem; /* Slightly larger quote text */
+            color: #4a5568; /* Darker gray for quotes */
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1; /* Allows quote to take available space */
+        }
 
-.testimonial-card .author strong {
-    color: var(--primary-color);
-    font-weight: 700;
-}
+        .testimonial-card .author {
+            font-weight: 700; /* Bolder author name */
+            font-size: 1rem; /* Slightly larger author text */
+            color: #2d3748; /* Darker for author */
+        }
+        .testimonial-card .author strong {
+            color: #8b5cf6; /* Purple accent for name */
+        }
 
+        .testimonial-card .author p {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #718096; /* Lighter grey for position/affiliation */
+            margin-top: 4px;
+        }
+
+        /* Auto-scroll animation */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                /* Adjust this value based on total width of cards and gaps */
+                /* For infinite loop, duplicate content in JS or calculate precisely */
+                /* For now, assuming enough content to seamlessly scroll */
+                transform: translateX(calc(-50%));
+            }
+        }
+
+        /* Manual scroll buttons (Optional - requires JS for functionality) */
+        .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem; /* Larger buttons */
+            background: rgba(139, 92, 246, 0.8); /* Purple background for buttons */
+            border: none;
+            color: #ffffff; /* White icon */
+            padding: 12px 18px; /* More padding */
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scroll-btn:hover {
+            background: rgba(139, 92, 246, 1); /* Solid purple on hover */
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .scroll-btn.left {
+            left: 10px;
+        }
+
+        .scroll-btn.right {
+            right: 10px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .testimonials-section {
+                padding: 50px 0; /* Removed horizontal padding */
+            }
+            .testimonials-section h2 {
+                font-size: 2.8rem;
+                margin-bottom: 40px;
+                padding-left: 15px; /* Adjust heading padding */
+                padding-right: 15px; /* Adjust heading padding */
+            }
+            .testimonial-card {
+                flex: 0 0 300px;
+            }
+            .scroll-wrapper {
+                padding: 0 30px; /* Less space for buttons */
+            }
+            .scroll-btn {
+                font-size: 2rem;
+                padding: 10px 15px;
+            }
+            .testimonial-grid {
+                padding-left: 15px; /* Adjust grid padding */
+                padding-right: 15px; /* Adjust grid padding */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-section {
+                padding: 40px 0; /* Removed horizontal padding */
+                border-radius: 16px; /* Smaller border radius for mobile */
+            }
+            .testimonials-section h2 {
+                font-size: 2.2rem;
+                margin-bottom: 30px;
+                padding-left: 10px; /* Adjust heading padding */
+                padding-right: 10px; /* Adjust heading padding */
+            }
+            .testimonial-card {
+                flex: 0 0 280px; /* Smaller cards for narrow screens */
+                padding: 25px;
+                min-height: 250px;
+            }
+            .testimonial-image {
+                width: 70px;
+                height: 70px;
+            }
+            .testimonial-card blockquote {
+                font-size: 0.95rem;
+            }
+            .scroll-wrapper {
+                padding: 0 5px; /* Minimal padding for buttons, might hide on very small screens */
+            }
+            .scroll-btn {
+                font-size: 1.8rem;
+                padding: 8px 12px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            }
+            .scroll-btn.left {
+                left: 0px; /* Push to very edge */
+            }
+            .scroll-btn.right {
+                right: 0px; /* Push to very edge */
+            }
+            .testimonial-grid {
+                padding-left: 10px; /* Adjust grid padding */
+                padding-right: 10px; /* Adjust grid padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-section h2 {
+                font-size: 1.8rem;
+            }
+            .testimonial-card {
+                flex: 0 0 90vw; /* Take almost full viewport width */
+                max-width: 320px; /* Cap width for very large phones */
+            }
+            .scroll-btn {
+                display: none; /* Hide buttons on very small screens if space is an issue */
+            }
+            .testimonial-grid {
+                padding-left: 5vw; /* Adjust grid padding based on viewport width */
+                padding-right: 5vw; /* Adjust grid padding based on viewport width */
+            }
+        }
+
+        /* Optional Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+            }
+            .testimonials-section {
+                background: #2d2d2d;
+                color: #e0e0e0;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            }
+            .testimonials-section h2 {
+                color: #f0f0f0;
+            }
+            .testimonials-section h2::after {
+                background-color: #a78bfa;
+            }
+            .testimonial-card {
+                background: #3a3a3a;
+                color: #d0d0d0;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                border: 1px solid #4a4a4a;
+            }
+            .testimonial-card:hover {
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            }
+            .testimonial-image {
+                border: 4px solid #a78bfa;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            .testimonial-card blockquote {
+                color: #c0c0c0;
+            }
+            .testimonial-card .author {
+                color: #e0e0e0;
+            }
+            .testimonial-card .author strong {
+                color: #a78bfa;
+            }
+            .testimonial-card .author p {
+                color: #b0b0b0;
+            }
+            .scroll-btn {
+                background: rgba(167, 139, 250, 0.8);
+                color: #1a1a1a;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            .scroll-btn:hosver {
+                background: rgba(167, 139, 250, 1);
+            }
+        }
+        /* Manual scroll buttons (Optional - requires JS for functionality) */
+        .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem; /* Larger buttons */
+            background: rgba(139, 92, 246, 0.8); /* Purple background for buttons */
+            border: none;
+            color: #ffffff; /* White icon */
+            padding: 12px 18px; /* More padding */
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scroll-btn:hover {
+            background: rgba(139, 92, 246, 1); /* Solid purple on hover */
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .scroll-btn.left {
+            left: 10px;
+        }
+
+        .scroll-btn.right {
+            right: 10px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .testimonials-section {
+                padding: 50px 15px;
+            }
+            .testimonials-section h2 {
+                font-size: 2.8rem;
+                margin-bottom: 40px;
+            }
+            .testimonial-card {
+                flex: 0 0 300px;
+            }
+            .scroll-wrapper {
+                padding: 0 30px; /* Less space for buttons */
+            }
+            .scroll-btn {
+                font-size: 2rem;
+                padding: 10px 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-section {
+                padding: 40px 10px;
+                border-radius: 16px; /* Smaller border radius for mobile */
+            }
+            .testimonials-section h2 {
+                font-size: 2.2rem;
+                margin-bottom: 30px;
+            }
+            .testimonial-card {
+                flex: 0 0 280px; /* Smaller cards for narrow screens */
+                padding: 25px;
+                min-height: 250px;
+            }
+            .testimonial-image {
+                width: 70px;
+                height: 70px;
+            }
+            .testimonial-card blockquote {
+                font-size: 0.95rem;
+            }
+            .scroll-wrapper {
+                padding: 0 5px; /* Minimal padding for buttons, might hide on very small screens */
+            }
+            .scroll-btn {
+                font-size: 1.8rem;
+                padding: 8px 12px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            }
+            .scroll-btn.left {
+                left: 0px; /* Push to very edge */
+            }
+            .scroll-btn.right {
+                right: 0px; /* Push to very edge */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-section h2 {
+                font-size: 1.8rem;
+            }
+            .testimonial-card {
+                flex: 0 0 90vw; /* Take almost full viewport width */
+                max-width: 320px; /* Cap width for very large phones */
+            }
+            .scroll-btn {
+                display: none; /* Hide buttons on very small screens if space is an issue */
+            }
+        }
+
+        /* Optional Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+            }
+            .testimonials-section {
+                background: #2d2d2d;
+                color: #e0e0e0;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            }
+            .testimonials-section h2 {
+                color: #f0f0f0;
+            }
+            .testimonials-section h2::after {
+                background-color: #a78bfa;
+            }
+            .testimonial-card {
+                background: #3a3a3a;
+                color: #d0d0d0;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                border: 1px solid #4a4a4a;
+            }
+            .testimonial-card:hover {
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            }
+            .testimonial-image {
+                border: 4px solid #a78bfa;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            .testimonial-card blockquote {
+                color: #c0c0c0;
+            }
+            .testimonial-card .author {
+                color: #e0e0e0;
+            }
+            .testimonial-card .author strong {
+                color: #a78bfa;
+            }
+            .testimonial-card .author p {
+                color: #b0b0b0;
+            }
+            .scroll-btn {
+                background: rgba(167, 139, 250, 0.8);
+                color: #1a1a1a;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            .scroll-btn:hover {
+                background: rgba(167, 139, 250, 1);
+            }
+        }
 /* --- Social Hub Section --- */
 .social-hub-section {
     background-color: var(--bg-dark);
@@ -1932,3 +2524,641 @@ footer a:hover {
         font-size: 1.8rem;
     }
 }
+
+
+
+
+/* --- Global Flying Elements Container --- */
+/* This container will hold butterflies and stars that fly across the entire page */
+.global-flying-container {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Cover full viewport width */
+    height: 100vh; /* Cover full viewport height */
+    pointer-events: none; /* Allow clicks/interactions on elements behind it */
+    overflow: hidden; /* Hide elements that fly off screen */
+    z-index: -1; /* Place it behind all page content, as a subtle background effect */
+}
+
+/* --- Global Flying Element Base Styles --- */
+.global-flying-element {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0; /* Start hidden */
+    pointer-events: none; /* Inherited from container, but good to be explicit */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; /* Linear movement for a smoother, less "eased" flight */
+    animation-fill-mode: forwards; /* Ensure element stays at end state before looping */
+    will-change: transform, opacity; /* Optimize for animation performance */
+}
+
+/* Global Butterfly Specifics */
+.global-flying-element.butterfly-global {
+    width: 30px; /* Smaller global butterflies */
+    height: 30px;
+    background-image: url('https://placehold.co/30x30/FFD700/000000?text=%F0%9F%A6%8B'); /* Gold butterfly emoji */
+    animation-name: flyButterflyGlobal;
+    animation-duration: calc(15s + var(--global-random-duration)); /* Longer duration for global flight */
+}
+
+@keyframes flyButterflyGlobal {
+    0% {
+        transform: translate(var(--global-start-x), var(--global-start-y)) scale(0.6) rotate(0deg);
+        opacity: 0;
+    }
+    10% { opacity: 0.8; } /* Fade in quickly */
+    80% { opacity: 0.8; } /* Stay visible for most of the flight */
+    100% {
+        transform: translate(var(--global-end-x), var(--global-end-y)) scale(1.0) rotate(360deg);
+        opacity: 0; /* Fade out at the end */
+    }
+}
+
+/* Global Star Specifics */
+.global-flying-element.star-global {
+    width: 20px; /* Smaller global stars */
+    height: 20px;
+    background-image: url('https://placehold.co/20x20/FFFFFF/000000?text=%E2%AD%90'); /* White star emoji */
+    animation-name: flyStarGlobal;
+    animation-duration: calc(10s + var(--global-random-duration)); /* Longer duration for global flight */
+}
+
+@keyframes flyStarGlobal {
+    0% {
+        transform: translate(var(--global-start-x), var(--global-start-y)) scale(0.4) rotate(0deg);
+        opacity: 0;
+    }
+    10% { opacity: 0.7; }
+    80% { opacity: 0.7; }
+    100% {
+        transform: translate(var(--global-end-x), var(--global-end-y)) scale(1.1) rotate(720deg); /* More rotation for stars */
+        opacity: 0;
+    }
+}
+
+/* --- Global Flying Elements Container --- */
+/* This container will hold butterflies and stars that fly across the entire page */
+.global-flying-container {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Cover full viewport width */
+    height: 100vh; /* Cover full viewport height */
+    pointer-events: none; /* Allow clicks/interactions on elements behind it */
+    overflow: hidden; /* Hide elements that fly off screen */
+    z-index: 1; /* Changed to 1: This ensures they are above the default document flow (like body's background) but still typically behind your main content sections if those have their own background-color. */
+}
+
+/* --- Global Flying Element Base Styles --- */
+.global-flying-element {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0; /* Start hidden */
+    pointer-events: none; /* Inherited from container, but good to be explicit */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; /* Linear movement for a smoother, less "eased" flight */
+    animation-fill-mode: forwards; /* Ensure element stays at end state before looping */
+    will-change: transform, opacity; /* Optimize for animation performance */
+}
+
+/* Global Butterfly Specifics */
+.global-flying-element.butterfly-global {
+    width: 30px; /* Smaller global butterflies */
+    height: 30px;
+    background-image: url('https://placehold.co/30x30/FFD700/000000?text=%F0%9F%A6%8B'); /* Gold butterfly emoji */
+    animation-name: flyButterflyGlobal;
+    animation-duration: calc(15s + var(--global-random-duration)); /* Longer duration for global flight */
+}
+
+@keyframes flyButterflyGlobal {
+    0% {
+        transform: translate(var(--global-start-x), var(--global-start-y)) scale(0.6) rotate(0deg);
+        opacity: 0;
+    }
+    10% { opacity: 0.8; } /* Fade in quickly */
+    80% { opacity: 0.8; } /* Stay visible for most of the flight */
+    100% {
+        transform: translate(var(--global-end-x), var(--global-end-y)) scale(1.0) rotate(360deg);
+        opacity: 0; /* Fade out at the end */
+    }
+}
+
+/* Global Star Specifics */
+.global-flying-element.star-global {
+    width: 20px; /* Smaller global stars */
+    height: 20px;
+    background-image: url('https://placehold.co/20x20/FFFFFF/000000?text=%E2%AD%90'); /* White star emoji */
+    animation-name: flyStarGlobal;
+    animation-duration: calc(10s + var(--global-random-duration)); /* Longer duration for global flight */
+}
+
+@keyframes flyStarGlobal {
+    0% {
+        transform: translate(var(--global-start-x), var(--global-start-y)) scale(0.4) rotate(0deg);
+        opacity: 0;
+    }
+    10% { opacity: 0.7; }
+    80% { opacity: 0.7; }
+    100% {
+        transform: translate(var(--global-end-x), var(--global-end-y)) scale(1.1) rotate(720deg); /* More rotation for stars */
+        opacity: 0;
+    }
+}
+
+/* Global Flying Element Specific Positions and Delays */
+/* Increased the number of butterflies for a more full-page effect */
+.global-flying-element:nth-child(1) { /* Global butterfly 1 */
+    --global-start-x: -20vw; --global-start-y: 10vh;
+    --global-end-x: 120vw; --global-end-y: 80vh;
+    --global-random-duration: 0s;
+    animation-delay: 0s;
+}
+.global-flying-element:nth-child(2) { /* Global butterfly 2 */
+    --global-start-x: 110vw; --global-start-y: 50vh;
+    --global-end-x: -10vw; --global-end-y: 20vh;
+    --global-random-duration: 3s;
+    animation-delay: 3s;
+}
+.global-flying-element:nth-child(3) { /* Global butterfly 3 */
+    --global-start-x: -5vw; --global-start-y: 90vh;
+    --global-end-x: 105vw; --global-end-y: -10vh;
+    --global-random-duration: 6s;
+    animation-delay: 6s;
+}
+.global-flying-element:nth-child(4) { /* Global butterfly 4 */
+    --global-start-x: 10vw; --global-start-y: -15vh;
+    --global-end-x: 80vw; --global-end-y: 115vh;
+    --global-random-duration: 2s;
+    animation-delay: 2s;
+}
+.global-flying-element:nth-child(5) { /* Global butterfly 5 */
+    --global-start-x: -30vw; --global-start-y: 60vh;
+    --global-end-x: 130vw; --global-end-y: 30vh;
+    --global-random-duration: 5s;
+    animation-delay: 5s;
+}
+.global-flying-element:nth-child(6) { /* Global butterfly 6 */
+    --global-start-x: 100vw; --global-start-y: -5vh;
+    --global-end-x: -20vw; --global-end-y: 95vh;
+    --global-random-duration: 1s;
+    animation-delay: 1s;
+}
+.global-flying-element:nth-child(7) { /* Global butterfly 7 */
+    --global-start-x: -10vw; --global-start-y: 20vh;
+    --global-end-x: 110vw; --global-end-y: 70vh;
+    --global-random-duration: 4s;
+    animation-delay: 4s;
+}
+.global-flying-element:nth-child(8) { /* Global butterfly 8 */
+    --global-start-x: 120vw; --global-start-y: 80vh;
+    --global-end-x: -30vw; --global-end-y: 10vh;
+    --global-random-duration: 7s;
+    animation-delay: 7s;
+}
+.global-flying-element:nth-child(9) { /* Global star 1 (now a star) */
+    --global-start-x: 50vw; --global-start-y: -10vh;
+    --global-end-x: -10vw; --global-end-y: 110vh;
+    --global-random-duration: 0.5s;
+    animation-delay: 0.5s;
+}
+.global-flying-element:nth-child(10) { /* Global star 2 (now a star) */
+    --global-start-x: 80vw; --global-start-y: 110vh;
+    --global-end-x: 10vw; --global-end-y: -10vh;
+    --global-random-duration: 4.5s;
+    animation-delay: 4.5s;
+}
+
+
+/* Also adjust global flying elements for smaller screens */
+@media (max-width: 575px) {
+    .global-flying-element.butterfly-global {
+        width: 20px;
+        height: 20px;
+    }
+    .global-flying-element.star-global {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
+
+
+
+/* --- Certificate Banner Section --- */
+.certificate-banner {
+    width: 100%;
+    min-height: 60vh; /* Responsive height */
+    display: flex;
+    font-family: 'Inter', sans-serif; /* Using Inter for consistency */
+    align-items: stretch; /* Stretch items to fill height */
+    position: relative; /* For absolute positioning of elements if needed */
+    overflow: hidden; /* Hide anything overflowing */
+}
+/* IMAGE SECTIONS */
+.banner-side {
+    flex: 1; /* Equal flex distribution */
+    background-size: cover;
+    /* Adjusted background-position to center 4% for better visual alignment */
+    background-position: center 4%;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease-out; /* Smooth transition for potential hover effects */
+}
+.left-side {
+    background-image: url('left\ vinay.jpg'); /* Replace with your actual image path */
+}
+
+.right-side {
+    background-image: url('right\ vinay.jpg'); /* Replace with your actual image path */
+}
+
+
+/* Add subtle hover effect on image sides */
+.banner-side:hover {
+    transform: scale(1.02);
+}
+
+/* CENTER AREA */
+.banner-center {
+    flex: 1; /* Equal flex distribution */
+    background: linear-gradient(135deg, #d1e7f5, #e0f2f7); /* Subtle gradient background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 30px 20px; /* Add internal padding */
+    overflow: hidden; /* Hide animated squares if they go too far */
+}
+
+/* TEXT */
+.banner-text {
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white for depth */
+    padding: 15px 30px;
+    font-size: clamp(1.5rem, 3vw, 2.5rem); /* Responsive font size */
+    font-weight: 800; /* Bolder text */
+    color: #0c3b63;
+    border-radius: 12px; /* Softer rounded corners */
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    text-align: center;
+    transform: translateY(20px); /* Initial state for animation */
+    opacity: 0; /* Initial state for animation */
+    animation: fadeInSlideUp 1s ease-out forwards; /* Animation */
+    animation-delay: 0.2s;
+}
+
+/* BUTTON */
+.banner-button {
+    background: linear-gradient(135deg, #ffc107, #ffa000); /* Attractive gradient */
+    color: #333; /* Darker text for contrast */
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem); /* Responsive font size */
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 15px; /* More rounded */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline for link */
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
+    transform: translateY(20px); /* Initial state for animation */
+    opacity: 0; /* Initial state for animation */
+    animation: fadeInSlideUp 1s ease-out forwards; /* Animation */
+    animation-delay: 0.4s; /* Delay after text */
+}
+
+.banner-button:hover {
+    transform: translateY(-5px) scale(1.02); /* Lift and slightly scale on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+    background: linear-gradient(135deg, #ffd740, #ffc400); /* Slightly brighter gradient on hover */
+}
+
+.banner-button::before {
+    content: "";
+    position: absolute;
+    top: -25px; /* Shorter line */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 25px;
+    background: #8a6d00;
+    opacity: 0; /* Initially hidden */
+    transition: all 0.3s ease-out;
+}
+
+.banner-button:hover::before {
+    top: -35px; /* Move line further up on hover */
+    opacity: 1; /* Show line on hover */
+}
+
+/* MOUSE ICON */
+.mouse-icon {
+    width: clamp(20px, 4vw, 24px); /* Responsive icon size */
+    height: clamp(20px, 4vw, 24px);
+    margin-left: 12px;
+    fill: currentColor; /* Inherit color from parent */
+    transition: transform 0.3s ease-in-out;
+}
+
+.banner-button:hover .mouse-icon {
+    transform: translateX(5px); /* Move icon slightly on hover */
+}
+
+/* --- Animations --- */
+@keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animated Yellow Squares */
+.animated-square {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #ffc107; /* Yellow */
+    border-radius: 5px; /* Slight rounded corners */
+    opacity: 0.6;
+    animation: floatAndRotate 15s infinite ease-in-out alternate;
+    z-index: 0; /* Behind text and button */
+}
+
+.animated-square.square-1 {
+    top: 10%; left: 15%;
+    animation-delay: 0s;
+    transform: scale(0.8);
+}
+.animated-square.square-2 {
+    bottom: 20%; right: 10%;
+    animation-delay: 3s;
+    transform: scale(1.1);
+}
+.animated-square.square-3 {
+    top: 30%; right: 40%;
+    animation-delay: 6s;
+    transform: scale(0.9);
+}
+.animated-square.square-4 {
+    bottom: 10%; left: 30%;
+    animation-delay: 9s;
+    transform: scale(1.2);
+}
+
+@keyframes floatAndRotate {
+    0% { transform: translate(0, 0) rotate(0deg) scale(var(--scale, 1)); opacity: 0.6; }
+    25% { transform: translate(20px, -15px) rotate(45deg) scale(var(--scale, 1.05)); opacity: 0.7; }
+    50% { transform: translate(0, 30px) rotate(90deg) scale(var(--scale, 1)); opacity: 0.6; }
+    75% { transform: translate(-15px, 10px) rotate(135deg) scale(var(--scale, 0.95)); opacity: 0.7; }
+    100% { transform: translate(0, 0) rotate(180deg) scale(var(--scale, 1)); opacity: 0.6; }
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) { /* Tablet and small desktop */
+    .certificate-banner {
+        flex-direction: column; /* Stack sections vertically */
+        min-height: auto; /* Allow height to auto-adjust */
+    }
+
+    .banner-side {
+        height: 200px; /* Give side images a fixed height when stacked */
+        flex: none; /* Remove flex grow */
+        /* Ensure images stay in the desired position when stacked */
+        background-position: center 4%; /* Updated for tablet */
+    }
+
+    .banner-center {
+        flex: 2; /* Give center content more space when stacked */
+        padding: 50px 30px; /* More padding on top/bottom */
+    }
+
+    .banner-text {
+        padding: 10px 20px;
+    }
+
+    .banner-button {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 575px) { /* Mobile */
+    .banner-side {
+        height: 150px; /* Smaller height for images on very small screens */
+        /* Ensure images stay in the desired position on mobile */
+        background-position: center 4%; /* Updated for mobile */
+    }
+
+    .banner-center {
+        padding: 40px 15px; /* Reduced padding for smaller screens */
+    }
+
+    .animated-square {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+
+
+/* Section Layout */
+.certificates-section {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Cool gradient */
+  padding: 80px 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Heading Style */
+.certificates-section h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Grid Layout */
+.certificates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Card Style with Glassmorphism */
+.certificate-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 30px 25px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+}
+
+.certificate-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2);
+}
+
+/* Certificate Name */
+.certificate-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #f8f9fa;
+}
+
+/* View Button */
+.certificate-card button {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  font-weight: 600;
+}
+
+.certificate-card button:hover {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+.fitness-overview-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.fitness-overview-section:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .fitness-overview-section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem;
+    gap: 2rem;
+  }
+}
+
+.fitness-overview-section .text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .fitness-overview-section .text-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.fitness-overview-section h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .fitness-overview-section h2 {
+    font-size: 3.75rem;
+  }
+}
+
+.fitness-overview-section p {
+  font-size: 1.125rem;
+  color: #374151;
+  margin-bottom: 2rem;
+  max-width: 32rem;
+}
+
+@media (min-width: 768px) {
+  .fitness-overview-section p {
+    font-size: 1.25rem;
+  }
+}
+
+.fitness-overview-section .btn-view-more {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #7c3aed;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.fitness-overview-section .btn-view-more:hover {
+  background-color: #6b21a8;
+  transform: scale(1.05);
+}
+
+.fitness-overview-section .btn-view-more:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(192, 132, 252, 0.5);
+}
+
+.fitness-overview-section .image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.fitness-overview-section .image-content img {
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+  border-radius: 9999px;
+  border: 4px solid #a78bfa;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  .fitness-overview-section .image-content img {
+    width: 24rem;
+    height: 24rem;
+  }
+}
+
+
+
