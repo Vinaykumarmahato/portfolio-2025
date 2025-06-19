@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-links li a'); // Select all navigation links
 
+    
     // Toggle menu visibility
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
