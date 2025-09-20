@@ -313,10 +313,13 @@ section:last-of-type {
     padding: 0;
     display: flex;
     align-items: center;
+    white-space: nowrap; /* Prevent nav items from wrapping */
+    gap: 28px; /* Consistent spacing between items */
 }
 
 .nav-links li {
-    margin-left: 35px;
+    margin-left: 0;
+    /* gap handles spacing now */
 }
 
 .nav-links a {
@@ -326,6 +329,8 @@ section:last-of-type {
     padding-bottom: 7px;
     position: relative;
     transition: color var(--transition-speed-sm);
+    font-size: 1.08em;
+    white-space: nowrap; /* Prevent link text from wrapping */
 }
 
 .nav-links a::after {
