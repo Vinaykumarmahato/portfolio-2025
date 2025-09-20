@@ -1,4 +1,354 @@
+
+
+.skills-section {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .skills-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .skills-section h2 {
+            font-size: 2.8rem;
+            color: var(--heading-color);
+            font-weight: 700;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .skills-section h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -15px;
+            border-radius: 2px;
+        }
+
+        /* Responsive Grid Layout */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            text-align: left;
+            margin-top: 70px;
+        }
+
+        /* Glassmorphism Card Style */
+        .skills-category {
+            background: var(--card-bg-color);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px -15px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            transform-style: preserve-3d; /* Required for tilt effect */
+            
+            /* Entrance Animation */
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        /* Staggered animation delay for each card */
+        .skills-category:nth-child(1) { animation-delay: 0.1s; }
+        .skills-category:nth-child(2) { animation-delay: 0.2s; }
+        .skills-category:nth-child(3) { animation-delay: 0.3s; }
+        .skills-category:nth-child(4) { animation-delay: 0.4s; }
+        .skills-category:nth-child(5) { animation-delay: 0.5s; }
+        .skills-category:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Glow Effect on Hover */
+        .skills-category:hover {
+            box-shadow: 0 0 25px var(--glow-color);
+            border-color: rgba(100, 255, 218, 0.5);
+        }
+
+        .skill-icon {
+            width: 45px;
+            height: 45px;
+            margin-bottom: 20px;
+            transform: translateZ(20px); /* Makes icon pop out in 3D */
+        }
+
+        .skills-category h3 {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            transform: translateZ(30px);
+        }
+
+        .skills-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            transform: translateZ(10px);
+        }
+
+        .skills-category li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 25px;
+            font-size: 0.95rem;
+        }
+        
+        .skills-category li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .skills-category strong {
+            color: var(--heading-color);
+            font-weight: 600;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .skills-section h2 {
+                font-size: 2.2rem;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+
+
+
+
+/* --- Main Section Styling --- */
+        .about-section-modern {
+            font-family: var(--font-family);
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .about-section-modern h2,
+        .about-section-modern h3 {
+            text-align: center;
+            color: var(--dark-color);
+            font-weight: 700;
+            margin-bottom: 40px;
+            letter-spacing: -0.5px;
+        }
+
+        .about-section-modern h2 {
+            font-size: 2.5rem;
+        }
+
+        .about-section-modern h3 {
+            font-size: 2rem;
+        }
+        
+        /* --- Two-Column Grid Layout --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 60px;
+        }
+
+        /* --- Left Column: Intro Text & Image --- */
+        .about-intro {
+            text-align: left;
+        }
+
+        .about-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 24px;
+            border: 4px solid var(--primary-light);
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+
+        .about-intro p {
+            color: var(--gray-color);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .about-intro strong {
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+
+        /* --- Right Column: Highlights with Icons --- */
+        .about-highlights-modern {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            background-color: var(--light-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .highlight-item:hover {
+             transform: translateY(-4px);
+             box-shadow: 0 8px 20px var(--shadow-color);
+        }
+
+        .highlight-item .icon {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+        }
+
+        .highlight-item .icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--primary-color);
+        }
+
+        .highlight-item p {
+            margin: 0;
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+        
+        .highlight-item p strong {
+             color: var(--dark-color);
+        }
+
+        /* --- GitHub Repositories Section --- */
+        .about-repos {
+            margin-top: 50px;
+        }
+        
+        .repo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .repo-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .repo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow-color);
+            border-color: var(--primary-color);
+        }
+        
+        .github-icon {
+            width: 32px;
+            height: 32px;
+            filter: grayscale(100%);
+             opacity: 0.5;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+
+        .repo-card:hover .github-icon {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .repo-card h4 {
+            margin: 0 0 4px 0;
+            color: var(--dark-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .repo-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--gray-color);
+            word-break: break-all;
+        }
+
+        .repo-footer {
+            text-align: center;
+            color: var(--gray-color);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-section-modern {
+                padding: 40px 15px;
+            }
+
+            .about-section-modern h2 {
+                font-size: 2rem;
+            }
+             .about-section-modern h3 {
+                font-size: 1.75rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
 .repo-grid {
+
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
