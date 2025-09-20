@@ -66,33 +66,271 @@
           Influencer</p>
         <p class="subline">🚀 Founder & CEO @ Inoglle Technologies | 👨‍🏫 ADV Indian Coder (500K+ learners) | 📢 Tech
           Mentor & Author</p>
-       <div class="social-icons">
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" /></a>
-  <a href="https://www.youtube.com/@ADVIndianCoder-i9y" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
-  </a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Gmail" /></a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" /></a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+        <div class="social-icons">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" /></a>
+      <a href="https://www.youtube.com/@ADVIndianCoder-i9y"><img
+        src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Gmail" /></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" /></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+        </div>
 
-  <!-- Audio Player -->
-  <audio id="myAudio">
-    <source src="Vinay Kumar Podcast.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <!-- Audio Play Button -->
-  <a href="javascript:void(0);" onclick="document.getElementById('myAudio').play();">
-    <img src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="Audio" width="40" />
-  </a>
-</div>
-
-<!-- Subscribe Button
-<a href="https://www.youtube.com/@ADVIndianCoder-i9y" target="_blank" class="btn-connect pulse">
-  <i class="fab fa-youtube"></i> SUBSCRIBE MY YOUTUBE CHANNEL
-</a> -->
 
       </div>
+
+
+<!-- ====================================================== -->
+<!-- BEGIN: VINAY KUMAR PODCAST PLAYER SECTION -->
+<!-- ====================================================== -->
+<div id="vk-podcast-container">
+
+    <!-- 1. HTML STRUCTURE -->
+    <audio id="vk-audio-player" src="Vinay Kumar Podcast.mp3"></audio>
+
+    <div class="vk-modal-overlay" id="vk-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="vk-modal-title">
+        <div class="vk-modal-content">
+            <button class="vk-close-btn" id="vk-close-modal" aria-label="Close dialog">&times;</button>
+            <div class="vk-icon">🎧</div>
+            <h2 id="vk-modal-title">Enjoy The Podcast?</h2>
+            <p id="vk-modal-description">Click below to listen to the <strong>Vinay Kumar Podcast</strong> while you explore the site!</p>
+            <button class="vk-play-btn" id="vk-play-btn">
+                ▶&nbsp; Play Podcast
+            </button>
+        </div>
+    </div>
+
+    <button class="vk-audio-toggle-btn" id="vk-audio-toggle-btn" aria-label="Mute or unmute audio" style="display: none;">
+        <span id="vk-audio-icon">🔊</span>
+    </button>
+    
+    <!-- 2. STYLES (Scoped to this container) -->
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        /* Scoped styles to prevent conflicts with your existing page */
+        #vk-podcast-container {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        #vk-podcast-container .vk-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(10, 20, 40, 0.5);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: grid;
+            place-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        #vk-podcast-container .vk-modal-overlay.is-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #vk-podcast-container .vk-modal-content {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e0e7ff 100%);
+            border-radius: 24px;
+            padding: 32px 40px;
+            max-width: 480px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 123, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transform: scale(0.95);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        #vk-podcast-container .vk-modal-overlay.is-visible .vk-modal-content {
+            transform: scale(1);
+        }
+        
+        
+        #vk-podcast-container .vk-icon {
+            font-size: 3.5rem;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        #vk-podcast-container #vk-modal-title {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 1.75rem;
+            margin: 0 0 12px 0;
+        }
+
+        #vk-podcast-container #vk-modal-description {
+            color: #576574;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0 0 28px 0;
+        }
+
+        #vk-podcast-container .vk-close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: transparent;
+            border: none;
+            font-size: 2rem;
+            font-weight: 300;
+            color: #99aab7;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        #vk-podcast-container .vk-close-btn:hover {
+            color: #2c3e50;
+            transform: rotate(90deg);
+        }
+
+        #vk-podcast-container .vk-play-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.15);
+            transition: all 0.3s ease;
+            outline-offset: 4px;
+        }
+
+        #vk-podcast-container .vk-play-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.15);
+        }
+
+        #vk-podcast-container .vk-play-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        #vk-podcast-container .vk-audio-toggle-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            border-radius: 50%;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            z-index: 9998; /* Lower than modal overlay */
+            transition: transform 0.2s ease;
+        }
+
+        #vk-podcast-container .vk-audio-toggle-btn:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 600px) {
+            #vk-podcast-container .vk-modal-content {
+                padding: 32px 24px;
+            }
+            #vk-podcast-container #vk-modal-title {
+                font-size: 1.5rem;
+            }
+            #vk-podcast-container .vk-play-btn {
+                padding: 12px 28px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</div>
+
+<!-- 3. JAVASCRIPT LOGIC -->
+<script>
+    // Self-invoking function to avoid global scope pollution
+    (function() {
+        const container = document.getElementById('vk-podcast-container');
+        if (!container) return; // Stop if the container is not found
+
+        // Select all elements within the container
+        const audioPlayer = container.querySelector('#vk-audio-player');
+        const modalOverlay = container.querySelector('#vk-modal-overlay');
+        const playBtn = container.querySelector('#vk-play-btn');
+        const closeBtn = container.querySelector('#vk-close-modal');
+        const audioToggleBtn = container.querySelector('#vk-audio-toggle-btn');
+        const audioIcon = container.querySelector('#vk-audio-icon');
+
+        function showModal() {
+            if(modalOverlay) modalOverlay.classList.add('is-visible');
+        }
+
+        function hideModal() {
+            if(modalOverlay) modalOverlay.classList.remove('is-visible');
+        }
+
+        function updateAudioIcon() {
+            if(audioIcon && audioPlayer) {
+                audioIcon.textContent = audioPlayer.muted ? '🔇' : '🔊';
+            }
+        }
+
+        if(playBtn) {
+            playBtn.addEventListener('click', function() {
+                if(audioPlayer) {
+                    audioPlayer.muted = false;
+                    audioPlayer.volume = 1.0;
+                    audioPlayer.play().catch(error => console.error("Audio play failed:", error));
+                }
+                hideModal();
+                if(audioToggleBtn) audioToggleBtn.style.display = 'grid';
+                updateAudioIcon();
+            });
+        }
+        
+        if(audioToggleBtn) {
+            audioToggleBtn.addEventListener('click', function() {
+                if(audioPlayer) {
+                    audioPlayer.muted = !audioPlayer.muted;
+                    updateAudioIcon();
+                }
+            });
+        }
+        
+        if(closeBtn) closeBtn.addEventListener('click', hideModal);
+
+        if(modalOverlay) {
+            modalOverlay.addEventListener('click', function(event) {
+                if (event.target === modalOverlay) {
+                    hideModal();
+                }
+            });
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('is-visible')) {
+                hideModal();
+            }
+        });
+
+        // Show the modal after a 1-second delay
+        setTimeout(showModal, 1000);
+        updateAudioIcon();
+    })();
+</script>
+<!-- ====================================================== -->
+<!-- END: VINAY KUMAR PODCAST PLAYER SECTION -->
+<!-- ====================================================== -->
+
 
       <!-- This is the updated hero__image-container that wraps your existing hero__image -->
       <div class="hero__image-container">
