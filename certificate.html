@@ -4,1062 +4,599 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinay Kumar Mahato - Leading Java Architect, AI Innovator & Global Educator | Aiming for No. 1 by 2030
-    </title>
+    <title>Certificates | Vinay Kumar Mahato</title>
     <meta name="description"
-        content="Official portfolio of Vinay Kumar Mahato, a Java Full Stack Developer, AI Innovator, Educator, and Entrepreneur. Showcasing projects, experience, contributions, webinars, certificates, and social presence towards becoming a top global tech leader by 2030.">
+        content="Explore the 50+ professional certifications of Vinay Kumar Mahato, a Java Full Stack Developer, AI Innovator, and Entrepreneur.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Segoe+UI:wght@300;400;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
 
-<style>
-    /* Root Variables */
-    :root {
-        --primary: #007bff;
-        --bg: #f4f7fa;
-        --glass: rgba(255, 255, 255, 0.2);
-        --shadow: rgba(0, 0, 0, 0.15);
-    }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    /* Base */
-    body {
-        margin: 0;
-        font-family: 'Montserrat', sans-serif;
-        background: var(--bg);
-        color: #333;
-    }
+    <style>
+        /* ---------------------------------- */
+        /* 1. ROOT VARIABLES                  */
+        /* ---------------------------------- */
+        :root {
+            /* Light Mode Palette */
+            --bg-color-light: #f4f7fc;
+            --bg-gradient-start-light: #e0e7ff;
+            --bg-gradient-end-light: #ffffff;
+            --card-bg-light: rgba(255, 255, 255, 0.5);
+            --text-color-light: #2c3e50;
+            --heading-color-light: #1a202c;
+            --primary-color-light: #3b82f6;
+            --accent-color-light: #8b5cf6;
+            --shadow-color-light: rgba(99, 102, 241, 0.2);
+            --border-color-light: rgba(255, 255, 255, 0.8);
 
-    /* Navbar (Existing styles, kept for context) */
-    .navbar {
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 15px 0;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+            /* Dark Mode Palette */
+            --bg-color-dark: #0f172a;
+            --bg-gradient-start-dark: #1e293b;
+            --bg-gradient-end-dark: #0f172a;
+            --card-bg-dark: rgba(30, 41, 59, 0.5);
+            --text-color-dark: #cbd5e1;
+            --heading-color-dark: #f8fafc;
+            --primary-color-dark: #60a5fa;
+            --accent-color-dark: #a78bfa;
+            --shadow-color-dark: rgba(0, 0, 0, 0.3);
+            --border-color-dark: rgba(255, 255, 255, 0.1);
 
-    .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    .site-logo {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--primary);
-        text-decoration: none;
-    }
-
-    .nav-links {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-    }
-
-    .nav-links li {
-        margin-left: 30px;
-    }
-
-    .nav-links a {
-        text-decoration: none;
-        color: #555;
-        font-weight: 600;
-        transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-        color: var(--primary);
-    }
-
-    .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.8rem;
-        color: #333;
-        cursor: pointer;
-    }
-
-    /* Responsive Navbar */
-    @media (max-width: 768px) {
-        .nav-links {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            background-color: #fff;
-            position: absolute;
-            top: 60px;
-            /* Adjust based on navbar height */
-            left: 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 10px 0;
+            /* Universal Variables */
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-speed: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .nav-links.active {
+        /* Assign variables for the default light theme */
+        body {
+            --bg-color: var(--bg-color-light);
+            --bg-gradient-start: var(--bg-gradient-start-light);
+            --bg-gradient-end: var(--bg-gradient-end-light);
+            --card-bg: var(--card-bg-light);
+            --text-color: var(--text-color-light);
+            --heading-color: var(--heading-color-light);
+            --primary-color: var(--primary-color-light);
+            --accent-color: var(--accent-color-light);
+            --shadow-color: var(--shadow-color-light);
+            --border-color: var(--border-color-light);
+        }
+
+        /* Override variables when dark mode is active */
+        body.dark-mode {
+            --bg-color: var(--bg-color-dark);
+            --bg-gradient-start: var(--bg-gradient-start-dark);
+            --bg-gradient-end: var(--bg-gradient-end-dark);
+            --card-bg: var(--card-bg-dark);
+            --text-color: var(--text-color-dark);
+            --heading-color: var(--heading-color-dark);
+            --primary-color: var(--primary-color-dark);
+            --accent-color: var(--accent-color-dark);
+            --shadow-color: var(--shadow-color-dark);
+            --border-color: var(--border-color-dark);
+        }
+
+        /* ---------------------------------- */
+        /* 2. BASE STYLES                     */
+        /* ---------------------------------- */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            background-image: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ---------------------------------- */
+        /* 3. NAVIGATION BAR                  */
+        /* ---------------------------------- */
+        .navbar {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-container {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .nav-links li {
-            margin: 10px 20px;
+        .site-logo .navbar-logo {
+            height: 50px;
+            width: auto;
+            transition: transform 0.3s ease;
         }
+        .site-logo:hover .navbar-logo {
+            transform: scale(1.05);
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            display: grid;
+            place-items: center;
+            transition: all 0.3s ease;
+        }
+        .theme-toggle:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: transparent;
+        }
+        .theme-toggle .fa-sun { display: none; }
+        body.dark-mode .theme-toggle .fa-sun { display: inline-block; }
+        body.dark-mode .theme-toggle .fa-moon { display: none; }
 
         .menu-toggle {
-            display: block;
-        }
-    }
-
-
-    /* Certificate Section Styling */
-    .certificate-section {
-        padding: 50px 20px;
-        text-align: center;
-        background: linear-gradient(to right, #f8f9fa, #e9ecef);
-    }
-
-    .certificate-section h2 {
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        font-weight: 700;
-        color: #333;
-    }
-
-    /* Grid */
-    .certificate-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        /* Crucial change here */
-        align-items: start;
-        /* Align grid items to the start of their grid area */
-    }
-
-    /* Card */
-    .certificate-card {
-        background: var(--glass);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        padding: 25px;
-        border-radius: 16px;
-        box-shadow: 0 8px 24px var(--shadow);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        display: flex;
-        flex-direction: column;
-        /* min-height: 250px; Add a min-height if cards collapse too much when image is hidden */
-        justify-content: flex-start;
-        /* Align content to the top */
-        align-items: center;
-        text-align: center;
-    }
-
-    .certificate-card:hover {
-        transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .certificate-card h3 {
-        margin-bottom: 20px;
-        font-size: 1.3rem;
-        color: #222;
-        /* Removed flex-grow: 1; if it was present, as it can cause height issues */
-    }
-
-    /* Button */
-    .view-btn {
-        background: linear-gradient(135deg, #007bff, #00c6ff);
-        color: white;
-        padding: 12px 28px;
-        border-radius: 50px;
-        border: none;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: transform 0.3s ease, background 0.3s ease;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 15px;
-        /* Added margin to separate button from text */
-    }
-
-    .view-btn:hover {
-        background: linear-gradient(135deg, #0056b3, #0096ff);
-        transform: scale(1.05);
-    }
-
-    /* Styles for the embedded certificate image container */
-    .certificate-image-container {
-        display: none;
-        /* Initially hidden */
-        margin-top: 20px;
-        /* Space between button and image */
-        padding-top: 20px;
-        /* Internal padding */
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        /* Separator line */
-        width: 100%;
-        /* Take full width of card */
-        overflow: hidden;
-        /* Ensure image doesn't overflow */
-        border-radius: 0 0 16px 16px;
-        /* Match card border radius at bottom */
-    }
-
-    .certificate-image {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        /* Slightly smaller border-radius for the image itself */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        /* Subtle shadow for image */
-    }
-
-    /* Responsive Text */
-    @media (max-width: 600px) {
-        .certificate-section h2 {
-            font-size: 2rem;
-        }
-    }
-
-    /* Global Flying Elements (from your original code) */
-    .global-flying-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: -1;
-        overflow: hidden;
-    }
-
-    .global-flying-element {
-        position: absolute;
-        opacity: 0.6;
-        animation: fly 20s linear infinite;
-    }
-
-    .butterfly-global {
-        width: 30px;
-        height: 30px;
-        background-color: #f7b731;
-        border-radius: 50%;
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    }
-
-    .star-global {
-        width: 20px;
-        height: 20px;
-        background-color: #ffd700;
-        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
-                50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    }
-
-    @keyframes fly {
-        0% {
-            transform: translate(0, 0);
-            opacity: 0;
-        }
-
-        20% {
-            opacity: 0.6;
-        }
-
-        80% {
-            opacity: 0.6;
-        }
-
-        100% {
-            transform: translate(100vw, 100vh);
-            opacity: 0;
-        }
-    }
-
-    .global-flying-element:nth-child(1) {
-        top: 10%;
-        left: -5%;
-        animation-duration: 25s;
-        animation-delay: 0s;
-        transform: rotate(45deg);
-    }
-
-    .global-flying-element:nth-child(2) {
-        top: 50%;
-        left: -10%;
-        animation-duration: 22s;
-        animation-delay: 3s;
-        transform: rotate(120deg);
-    }
-
-    .global-flying-element:nth-child(3) {
-        top: 80%;
-        left: -15%;
-        animation-duration: 28s;
-        animation-delay: 6s;
-        transform: rotate(200deg);
-    }
-
-    .global-flying-element:nth-child(4) {
-        top: 20%;
-        left: -20%;
-        animation-duration: 30s;
-        animation-delay: 1s;
-        transform: rotate(70deg);
-    }
-
-    .global-flying-element:nth-child(5) {
-        top: 60%;
-        left: -25%;
-        animation-duration: 26s;
-        animation-delay: 4s;
-        transform: rotate(150deg);
-    }
-
-    .global-flying-element:nth-child(6) {
-        top: 30%;
-        left: -10%;
-        animation-duration: 23s;
-        animation-delay: 7s;
-        transform: rotate(240deg);
-    }
-
-    .global-flying-element:nth-child(7) {
-        top: 15%;
-        left: -15%;
-        animation-duration: 27s;
-        animation-delay: 2s;
-        transform: rotate(90deg);
-    }
-
-    .global-flying-element:nth-child(8) {
-        top: 70%;
-        left: -5%;
-        animation-duration: 24s;
-        animation-delay: 5s;
-        transform: rotate(180deg);
-
-        /* Existing styles in your <style> block */
-
-        /* Styles for the embedded certificate image/PDF container */
-        .certificate-image-container {
             display: none;
-            /* Initially hidden */
-            margin-top: 20px;
-            /* Space between button and content */
-            padding-top: 20px;
-            /* Internal padding */
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            /* Separator line */
-            width: 100%;
-            /* Take full width of card */
-            overflow: hidden;
-            /* Ensure content doesn't overflow */
-            border-radius: 0 0 16px 16px;
-            /* Match card border radius at bottom */
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--heading-color);
+            cursor: pointer;
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px; /* Adjust based on navbar height */
+                left: 0;
+                width: 100%;
+                background: var(--card-bg);
+                backdrop-filter: blur(10px);
+                padding: 1rem 0;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links li {
+                text-align: center;
+                margin: 0.5rem 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* ---------------------------------- */
+        /* 4. CERTIFICATES SECTION            */
+        /* ---------------------------------- */
+        .certificate-section {
+            padding: 6rem 0;
+        }
+
+        .section-header {
             text-align: center;
-            /* Center content within this container */
+            margin-bottom: 4rem;
         }
 
-        /* Specific styling for embedded PDFs */
-        .certificate-image-container iframe {
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--heading-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .section-header .emoji-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Certificate Grid */
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Certificate Card */
+        .certificate-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 var(--shadow-color);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+        
+        .certificate-card:nth-child(2) { animation-delay: 0.05s; }
+        .certificate-card:nth-child(3) { animation-delay: 0.1s; }
+        .certificate-card:nth-child(4) { animation-delay: 0.15s; }
+        .certificate-card:nth-child(5) { animation-delay: 0.2s; }
+        .certificate-card:nth-child(6) { animation-delay: 0.25s; }
+
+        .certificate-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 40px 0 var(--shadow-color);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .certificate-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--heading-color);
+            margin-bottom: 1.5rem;
+            min-height: 3.75rem; /* Ensures cards have consistent height */
+        }
+
+        .view-btn {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .view-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ---------------------------------- */
+        /* 5. LIGHTBOX MODAL                  */
+        /* ---------------------------------- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            /* Max width to fit within container */
-            height: 500px;
-            /* Adjust height as needed for PDF viewer */
-            border: 1px solid #ccc;
-            /* Light border for the iframe */
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background: var(--bg-color);
+            padding: 1rem;
+            border-radius: 16px;
+            max-width: 90%;
+            max-height: 90vh;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-content img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: calc(90vh - 2rem);
+            object-fit: contain;
             border-radius: 8px;
-            /* Match image styling */
         }
-
-        .certificate-image-container p a {
-            color: var(--primary);
-            text-decoration: underline;
-            font-weight: 600;
+        
+        .close-modal {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: white;
+            color: #333;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 2001;
         }
-    }
-
-
-    .site-logo {
-        font-family: cursive;
-        text-decoration: none;
-        color: white;
-        font-size: 2em;
-        text-shadow:
-            0 0 5px #fff,
-            0 0 10px #fff,
-            0 0 15px #007bff,
-            0 0 20px #007bff,
-            0 0 25px #007bff,
-            0 0 30px #007bff,
-            0 0 35px #007bff;
-    }
-</style>
+    </style>
+</head>
 
 <body>
 
     <nav class="navbar">
-    <div class="container nav-container">
-      <a href="#hero" class="site-logo">VKM</a>
-      <button class="menu-toggle" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#Certificates">Certificates</a></li>
-
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="index.html#webinars">Free Webinar</a></li>
-        <li><a href="#leadership">Free Courses</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#Fitness">Fitness</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-    <div class="global-flying-container">
-        <div class="global-flying-element butterfly-global"></div>
-        <div class="global-flying-element butterfly-global"></div>
-        <div class="global-flying-element butterfly-global"></div>
-        <div class="global-flying-element butterfly-global"></div>
-        <div class="global-flying-element butterfly-global"></div>
-        <div class="global-flying-element butterfly-global"></div>
-        <div class="global-flying-element butterfly-global"></div>
-        <div class="global-flying-element butterfly-global"></div>
-        <div class="global-flying-element star-global"></div>
-        <div class="global-flying-element star-global"></div>
-    </div>
-
-
-    <section class="certificate-section" id="Certificates">
-        <h2>📜 My 50+ Certificates</h2>
-        <div class="certificate-grid">
-            <div class="certificate-card">
-                <h3>Ahilya mam.png</h3>
-                <button class="view-btn" id="btn1" onclick="toggleCertificate('cert1-image', 'btn1')">View Credential</button>
-                <div id="cert1-image" class="certificate-image-container">
-                    <img src="img/certificate/Ahilya mam.png" alt="Ahilya mam.png" class="certificate-image" />
-                </div>
+        <div class="container nav-container">
+            <a href="index.html" class="site-logo">
+                <img src="img/logo.png" alt="Vinay Kumar Mahato Logo" class="navbar-logo">
+            </a>
+            <div class="nav-menu">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="certificate.html">Certificates</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#webinars">Webinars</a></li>
+                    <li><a href="index.html#leadership">Courses</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="Fitness.html">Fitness</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <div class="certificate-card">
-                <h3>Ajitha mam.jpg</h3>
-                <button class="view-btn" id="btn2" onclick="toggleCertificate('cert2-image', 'btn2')">View Credential</button>
-                <div id="cert2-image" class="certificate-image-container">
-                    <img src="img/certificate/Ajitha mam.jpg" alt="Ajitha mam.jpg" class="certificate-image" />
-                </div>
-            </div>
-            <div class="certificate-card">
-                <h3>Arul sir first year.jpg</h3>
-                <button class="view-btn" id="btn3" onclick="toggleCertificate('cert3-image', 'btn3')">View Credential</button>
-                <div id="cert3-image" class="certificate-image-container">
-                    <img src="img/certificate/Arul sir first year.jpg" alt="Arul sir first year.jpg" class="certificate-image" />
-                </div>
-            </div>
-            <div class="certificate-card">
-                <h3>Gayatri.png</h3>
-                <button class="view-btn" id="btn4" onclick="toggleCertificate('cert4-image', 'btn4')">View Credential</button>
-                <div id="cert4-image" class="certificate-image-container">
-                    <img src="img/certificate/Gayatri.png" alt="Gayatri.png" class="certificate-image" />
-                </div>
-            </div>
-            <div class="certificate-card">
-                <h3>Jaypriya mam.jpg</h3>
-                <button class="view-btn" id="btn5" onclick="toggleCertificate('cert5-image', 'btn5')">View Credential</button>
-                <div id="cert5-image" class="certificate-image-container">
-                    <img src="img/certificate/Jaypriya mam.jpg" alt="Jaypriya mam.jpg" class="certificate-image" />
-                </div>
-            </div>
-            <div class="certificate-card">
-                <h3>John peter sir.jpg</h3>
-                <button class="view-btn" id="btn6" onclick="toggleCertificate('cert6-image', 'btn6')">View Credential</button>
-                <div id="cert6-image" class="certificate-image-container">
-                    <img src="img/certificate/John peter sir.jpg" alt="John peter sir.jpg" class="certificate-image" />
-                </div>
-            </div>
-            <div class="certificate-card">
-                <h3>Monika mam.jpg</h3>
-                <button class="view-btn" id="btn7" onclick="toggleCertificate('cert7-image', 'btn7')">View Credential</button>
-                <div id="cert7-image" class="certificate-image-container">
-                    <img src="img/certificate/Monika mam.jpg" alt="Monika mam.jpg" class="certificate-image" />
-                </div>
-            </div>
-            <div class="certificate-card">
-                <h3>RES sir.jpg</h3>
-                <button class="view-btn" id="btn8" onclick="toggleCertificate('cert8-image', 'btn8')">View Credential</button>
-                <div id="cert8-image" class="certificate-image-container">
-                    <img src="img/certificate/RES sir.jpg" alt="RES sir.jpg" class="certificate-image" />
-                </div>
-            </div>
-            <div class="certificate-card">
-                <h3>Savitri mam.jpg</h3>
-                <button class="view-btn" id="btn9" onclick="toggleCertificate('cert9-image', 'btn9')">View Credential</button>
-                <div id="cert9-image" class="certificate-image-container">
-                    <img src="img/certificate/Savitri mam.jpg" alt="Savitri mam.jpg" class="certificate-image" />
-                </div>
-            </div>
-            <div class="certificate-card">
-                <h3>Sujata mam.jpg</h3>
-                <button class="view-btn" id="btn10" onclick="toggleCertificate('cert10-image', 'btn10')">View Credential</button>
-                <div id="cert10-image" class="certificate-image-container">
-                    <img src="img/certificate/Sujata mam.jpg" alt="Sujata mam.jpg" class="certificate-image" />
-                </div>
-            </div>
-            <div class="certificate-card">
-                <h3>Varalakshmi Mam.jpg</h3>
-                <button class="view-btn" id="btn11" onclick="toggleCertificate('cert11-image', 'btn11')">View Credential</button>
-                <div id="cert11-image" class="certificate-image-container">
-                    <img src="img/certificate/Varalakshmi Mam.jpg" alt="Varalakshmi Mam.jpg" class="certificate-image" />
-                </div>
-            </div>
-                <h3>Certificate 19: Version Control (Git)</h3>
-                <button class="view-btn" id="btn19" onclick="toggleCertificate('cert19-image', 'btn19')">View
-                    Credential</button>
-                <div id="cert19-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=19" alt="Version Control (Git) Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 20: Agile Methodologies</h3>
-                <button class="view-btn" id="btn20" onclick="toggleCertificate('cert20-image', 'btn20')">View
-                    Credential</button>
-                <div id="cert20-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=20" alt="Agile Methodologies Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 21: Blockchain Technology</h3>
-                <button class="view-btn" id="btn21" onclick="toggleCertificate('cert21-image', 'btn21')">View
-                    Credential</button>
-                <div id="cert21-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=21" alt="Blockchain Technology Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 22: Digital Marketing</h3>
-                <button class="view-btn" id="btn22" onclick="toggleCertificate('cert22-image', 'btn22')">View
-                    Credential</button>
-                <div id="cert22-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=22" alt="Digital Marketing Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 23: Project Management</h3>
-                <button class="view-btn" id="btn23" onclick="toggleCertificate('cert23-image', 'btn23')">View
-                    Credential</button>
-                <div id="cert23-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=23" alt="Project Management Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 24: Business Analytics</h3>
-                <button class="view-btn" id="btn24" onclick="toggleCertificate('cert24-image', 'btn24')">View
-                    Credential</button>
-                <div id="cert24-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=24" alt="Business Analytics Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 25: Big Data</h3>
-                <button class="view-btn" id="btn25" onclick="toggleCertificate('cert25-image', 'btn25')">View
-                    Credential</button>
-                <div id="cert25-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=25" alt="Big Data Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 26: Robotics</h3>
-                <button class="view-btn" id="btn26" onclick="toggleCertificate('cert26-image', 'btn26')">View
-                    Credential</button>
-                <div id="cert26-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=26" alt="Robotics Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 27: Internet of Things (IoT)</h3>
-                <button class="view-btn" id="btn27" onclick="toggleCertificate('cert27-image', 'btn27')">View
-                    Credential</button>
-                <div id="cert27-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=27" alt="Internet of Things (IoT) Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 28: Game Development</h3>
-                <button class="view-btn" id="btn28" onclick="toggleCertificate('cert28-image', 'btn28')">View
-                    Credential</button>
-                <div id="cert28-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=28" alt="Game Development Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 29: Quantum Computing</h3>
-                <button class="view-btn" id="btn29" onclick="toggleCertificate('cert29-image', 'btn29')">View
-                    Credential</button>
-                <div id="cert29-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=29" alt="Quantum Computing Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 30: Ethical Hacking</h3>
-                <button class="view-btn" id="btn30" onclick="toggleCertificate('cert30-image', 'btn30')">View
-                    Credential</button>
-                <div id="cert30-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=30" alt="Ethical Hacking Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 31: Cloud Security</h3>
-                <button class="view-btn" id="btn31" onclick="toggleCertificate('cert31-image', 'btn31')">View
-                    Credential</button>
-                <div id="cert31-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=31" alt="Cloud Security Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 32: Deep Learning</h3>
-                <button class="view-btn" id="btn32" onclick="toggleCertificate('cert32-image', 'btn32')">View
-                    Credential</button>
-                <div id="cert32-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=32" alt="Deep Learning Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 33: Natural Language Processing</h3>
-                <button class="view-btn" id="btn33" onclick="toggleCertificate('cert33-image', 'btn33')">View
-                    Credential</button>
-                <div id="cert33-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=33" alt="Natural Language Processing Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 34: Computer Vision</h3>
-                <button class="view-btn" id="btn34" onclick="toggleCertificate('cert34-image', 'btn34')">View
-                    Credential</button>
-                <div id="cert34-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=34" alt="Computer Vision Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 35: Reinforcement Learning</h3>
-                <button class="view-btn" id="btn35" onclick="toggleCertificate('cert35-image', 'btn35')">View
-                    Credential</button>
-                <div id="cert35-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=35" alt="Reinforcement Learning Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 36: Data Visualization</h3>
-                <button class="view-btn" id="btn36" onclick="toggleCertificate('cert36-image', 'btn36')">View
-                    Credential</button>
-                <div id="cert36-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=36" alt="Data Visualization Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 37: Statistical Analysis</h3>
-                <button class="view-btn" id="btn37" onclick="toggleCertificate('cert37-image', 'btn37')">View
-                    Credential</button>
-                <div id="cert37-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=37" alt="Statistical Analysis Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 38: Spreadsheet Mastery</h3>
-                <button class="view-btn" id="btn38" onclick="toggleCertificate('cert38-image', 'btn38')">View
-                    Credential</button>
-                <div id="cert38-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=38" alt="Spreadsheet Mastery Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 39: Presentation Skills</h3>
-                <button class="view-btn" id="btn39" onclick="toggleCertificate('cert39-image', 'btn39')">View
-                    Credential</button>
-                <div id="cert39-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=39" alt="Presentation Skills Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 40: Effective Communication</h3>
-                <button class="view-btn" id="btn40" onclick="toggleCertificate('cert40-image', 'btn40')">View
-                    Credential</button>
-                <div id="cert40-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=40" alt="Effective Communication Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 41: Leadership Skills</h3>
-                <button class="view-btn" id="btn41" onclick="toggleCertificate('cert41-image', 'btn41')">View
-                    Credential</button>
-                <div id="cert41-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=41" alt="Leadership Skills Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 42: Time Management</h3>
-                <button class="view-btn" id="btn42" onclick="toggleCertificate('cert42-image', 'btn42')">View
-                    Credential</button>
-                <div id="cert42-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=42" alt="Time Management Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 43: Problem Solving</h3>
-                <button class="view-btn" id="btn43" onclick="toggleCertificate('cert43-image', 'btn43')">View
-                    Credential</button>
-                <div id="cert43-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=43" alt="Problem Solving Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 44: Critical Thinking</h3>
-                <button class="view-btn" id="btn44" onclick="toggleCertificate('cert44-image', 'btn44')">View
-                    Credential</button>
-                <div id="cert44-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=44" alt="Critical Thinking Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 45: Creative Writing</h3>
-                <button class="view-btn" id="btn45" onclick="toggleCertificate('cert45-image', 'btn45')">View
-                    Credential</button>
-                <div id="cert45-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=45" alt="Creative Writing Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 46: Public Speaking</h3>
-                <button class="view-btn" id="btn46" onclick="toggleCertificate('cert46-image', 'btn46')">View
-                    Credential</button>
-                <div id="cert46-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=46" alt="Public Speaking Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 47: Financial Literacy</h3>
-                <button class="view-btn" id="btn47" onclick="toggleCertificate('cert47-image', 'btn47')">View
-                    Credential</button>
-                <div id="cert47-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=47" alt="Financial Literacy Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 48: Investment Strategies</h3>
-                <button class="view-btn" id="btn48" onclick="toggleCertificate('cert48-image', 'btn48')">View
-                    Credential</button>
-                <div id="cert48-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=48" alt="Investment Strategies Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 49: Entrepreneurship</h3>
-                <button class="view-btn" id="btn49" onclick="toggleCertificate('cert49-image', 'btn49')">View
-                    Credential</button>
-                <div id="cert49-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=49" alt="Entrepreneurship Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 50: Sales Techniques</h3>
-                <button class="view-btn" id="btn50" onclick="toggleCertificate('cert50-image', 'btn50')">View
-                    Credential</button>
-                <div id="cert50-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=50" alt="Sales Techniques Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 51: Customer Service</h3>
-                <button class="view-btn" id="btn51" onclick="toggleCertificate('cert51-image', 'btn51')">View
-                    Credential</button>
-                <div id="cert51-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=51" alt="Customer Service Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 52: Technical Writing</h3>
-                <button class="view-btn" id="btn52" onclick="toggleCertificate('cert52-image', 'btn52')">View
-                    Credential</button>
-                <div id="cert52-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=52" alt="Technical Writing Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 53: Research Methods</h3>
-                <button class="view-btn" id="btn53" onclick="toggleCertificate('cert53-image', 'btn53')">View
-                    Credential</button>
-                <div id="cert53-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=53" alt="Research Methods Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 54: Scrum Master</h3>
-                <button class="view-btn" id="btn54" onclick="toggleCertificate('cert54-image', 'btn54')">View
-                    Credential</button>
-                <div id="cert54-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=54" alt="Scrum Master Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 55: Product Ownership</h3>
-                <button class="view-btn" id="btn55" onclick="toggleCertificate('cert55-image', 'btn55')">View
-                    Credential</button>
-                <div id="cert55-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=55" alt="Product Ownership Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 56: Site Reliability Engineering</h3>
-                <button class="view-btn" id="btn56" onclick="toggleCertificate('cert56-image', 'btn56')">View
-                    Credential</button>
-                <div id="cert56-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=56" alt="Site Reliability Engineering Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 57: Full Stack Web Development</h3>
-                <button class="view-btn" id="btn57" onclick="toggleCertificate('cert57-image', 'btn57')">View
-                    Credential</button>
-                <div id="cert57-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=57" alt="Full Stack Web Development Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 58: Cloud Native Applications</h3>
-                <button class="view-btn" id="btn58" onclick="toggleCertificate('cert58-image', 'btn58')">View
-                    Credential</button>
-                <div id="cert58-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=58" alt="Cloud Native Applications Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 59: Microservices Architecture</h3>
-                <button class="view-btn" id="btn59" onclick="toggleCertificate('cert59-image', 'btn59')">View
-                    Credential</button>
-                <div id="cert59-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=59" alt="Microservices Architecture Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Certificate 60: Advanced AI Concepts</h3>
-                <button class="view-btn" id="btn60" onclick="toggleCertificate('cert60-image', 'btn60')">View
-                    Credential</button>
-                <div id="cert60-image" class="certificate-image-container">
-                    <img src="https://picsum.photos/600/400?random=60" alt="Advanced AI Concepts Certificate"
-                        class="certificate-image" />
-                </div>
-            </div>
-
         </div>
-    </section>
+    </nav>
+
+    <main>
+        <section class="certificate-section" id="certificates">
+            <div class="container">
+                <header class="section-header">
+                    <span class="emoji-icon">📜</span>
+                    <h2>My Professional Credentials</h2>
+                </header>
+                <div class="certificate-grid">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content" id="modal-content">
+            <button class="close-modal" id="close-modal" aria-label="Close certificate view">&times;</button>
+            <img src="" alt="Certificate" id="modal-image">
+        </div>
+    </div>
 
     <script>
-        function toggleCertificate(imageId, buttonId) {
-            const imageContainer = document.getElementById(imageId);
-            const button = document.getElementById(buttonId);
-
-            if (imageContainer.style.display === 'block') {
-                imageContainer.style.display = 'none';
-                button.textContent = 'View Credential';
-            } else {
-                imageContainer.style.display = 'block';
-                button.textContent = 'Hide Credential';
-            }
-        }
-
-        // Existing navigation scripts
         document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
+            
+            // --- DATA FOR CERTIFICATES ---
+            const certificateData = [
+                "Testmonials/Ahilya mam.png",
+                "Testmonials/Ajitha mam.jpg",
+                "Testmonials/Arul sir first year.jpg",
+                "Testmonials/Gayatri.png",
+                "Testmonials/Jaypriya mam.jpg",
+                "Testmonials/John peter sir.jpg",
+                "Testmonials/Monika mam.jpg",
+                "Testmonials/RES sir.jpg",
+                "Testmonials/Savitri mam.jpg",
+                "Testmonials/Sujata mam.jpg",
+                "Testmonials/Varalakshmi Mam.jpg",
+                "https://picsum.photos/800/600?random=19",
+                "https://picsum.photos/800/600?random=20",
+                "https://picsum.photos/800/600?random=21",
+                "https://picsum.photos/800/600?random=22",
+                "https://picsum.photos/800/600?random=23",
+                "https://picsum.photos/800/600?random=24",
+                "https://picsum.photos/800/600?random=25",
+                "https://picsum.photos/800/600?random=26",
+                "https://picsum.photos/800/600?random=27",
+                "https://picsum.photos/800/600?random=28",
+                "https://picsum.photos/800/600?random=29",
+                "https://picsum.photos/800/600?random=30",
+                "https://picsum.photos/800/600?random=31",
+                "https://picsum.photos/800/600?random=32",
+                "https://picsum.photos/800/600?random=33",
+                "https://picsum.photos/800/600?random=34",
+                "https://picsum.photos/800/600?random=35",
+                "https://picsum.photos/800/600?random=36",
+                "https://picsum.photos/800/600?random=37",
+                "https://picsum.photos/800/600?random=38",
+                "https://picsum.photos/800/600?random=39",
+                "https://picsum.photos/800/600?random=40"
+                // Add all 50+ image paths here to automatically create cards
+            ];
 
-            if (menuToggle && navLinks) {
-                menuToggle.addEventListener('click', function () {
+            const grid = document.querySelector('.certificate-grid');
+
+            if (grid) {
+                certificateData.forEach(src => {
+                    const card = document.createElement('div');
+                    card.className = 'certificate-card';
+                    
+                    const fileName = src.split('/').pop();
+                    let title = "Certificate"; // Default title
+                    
+                    if (fileName.startsWith('picsum')) {
+                         const randomNum = fileName.split('=')[1];
+                         title = `Placeholder Certificate ${randomNum}`;
+                    } else {
+                        title = fileName
+                            .replace(/\.(jpg|png|jpeg|gif)$/i, '')
+                            .replace(/[-_]/g, ' ')
+                            .replace(/\b\w/g, l => l.toUpperCase());
+                    }
+
+
+                    card.innerHTML = `
+                        <div class="card-icon"><i class="fas fa-award"></i></div>
+                        <h3>${title}</h3>
+                        <button class="view-btn" data-image-src="${src}">View Credential</button>
+                    `;
+                    grid.appendChild(card);
+                });
+            }
+
+            // --- THEME TOGGLE LOGIC ---
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            if (themeToggle && body) {
+                if (localStorage.getItem('theme') === 'dark') {
+                    body.classList.add('dark-mode');
+                }
+                themeToggle.addEventListener('click', () => {
+                    body.classList.toggle('dark-mode');
+                    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+                });
+            }
+
+            // --- MOBILE NAVIGATION ---
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+            const icon = menuToggle ? menuToggle.querySelector('i') : null;
+
+
+            if (menuToggle && navLinks && icon) {
+                menuToggle.addEventListener('click', () => {
                     navLinks.classList.toggle('active');
-                    const icon = menuToggle.querySelector('i');
                     if (navLinks.classList.contains('active')) {
                         icon.classList.remove('fa-bars');
                         icon.classList.add('fa-times');
-                        menuToggle.setAttribute('aria-expanded', 'true');
                     } else {
                         icon.classList.remove('fa-times');
                         icon.classList.add('fa-bars');
-                        menuToggle.setAttribute('aria-expanded', 'false');
                     }
                 });
-
-                navLinks.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        navLinks.classList.remove('active');
-                        const icon = menuToggle.querySelector('i');
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                        menuToggle.setAttribute('aria-expanded', 'false');
-                    });
-                });
             }
-        });
+            
+            // --- LIGHTBOX MODAL LOGIC ---
+            const modalOverlay = document.getElementById('modal-overlay');
+            const modalImage = document.getElementById('modal-image');
+            const closeModalBtn = document.getElementById('close-modal');
 
+            function openModal(src) {
+                if(modalImage && modalOverlay) {
+                    modalImage.src = src;
+                    modalOverlay.classList.add('active');
+                }
+            }
 
-        const backToHomeBtn = document.getElementById("backToHomeBtn");
+            function closeModal() {
+                if(modalOverlay) {
+                    modalOverlay.classList.remove('active');
+                }
+            }
 
-        const sectionIds = [
-            "hero",
-            "about",
-            "skills",
-            "projects",
-            "experience",
-            "webinars",
-            "Certificates",
-            "leadership",
-            "testimonials",
-            "social-hub",
-            "contact"
-        ];
+            // Use event delegation for dynamically created .view-btn
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('view-btn')) {
+                    openModal(e.target.dataset.imageSrc);
+                }
+            });
 
-        function getCurrentSectionId() {
-            let currentSection = null;
-            for (let i = sectionIds.length - 1; i >= 0; i--) {
-                const section = document.getElementById(sectionIds[i]);
-                if (section) {
-                    const rect = section.getBoundingClientRect();
-                    if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.5) {
-                        currentSection = sectionIds[i];
-                        break;
+            if(closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+
+            if(modalOverlay) {
+                 modalOverlay.addEventListener('click', (e) => {
+                    if (e.target === modalOverlay) {
+                        closeModal();
                     }
-                }
-            }
-            return currentSection;
-        }
-
-        function scrollToPreviousSection() {
-            const currentSectionId = getCurrentSectionId();
-            const currentIndex = sectionIds.indexOf(currentSectionId);
-
-            if (currentIndex > 0) {
-                const previousSectionId = sectionIds[currentIndex - 1];
-                const previousSection = document.getElementById(previousSectionId);
-                if (previousSection) {
-                    previousSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            } else {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
                 });
             }
-        }
 
-        window.onscroll = function () {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                backToHomeBtn.style.display = "block";
-            } else {
-                backToHomeBtn.style.display = "none";
-            }
-        };
-
-        backToHomeBtn.addEventListener("click", function (event) {
-            event.preventDefault();
-            scrollToPreviousSection();
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) {
+                    closeModal();
+                }
+            });
         });
     </script>
-</body>
 
+</body>
 </html>
