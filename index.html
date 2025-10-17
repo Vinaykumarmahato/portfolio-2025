@@ -1143,111 +1143,112 @@
   </section>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
+    // Use a single event listener to run all scripts once the HTML is fully loaded.
+    document.addEventListener('DOMContentLoaded', () => {
 
-      if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', function () {
-          navLinks.classList.toggle('active');
-          // Optional: Toggle icon between bars and times
-          const icon = menuToggle.querySelector('i');
-          if (navLinks.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-            menuToggle.setAttribute('aria-expanded', 'true');
-          } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-            menuToggle.setAttribute('aria-expanded', 'false');
-          }
-        });
+        // --- 1. THEME TOGGLE (LIGHT/DARK MODE) ---
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
 
-        // Close the menu when a link is clicked (for single-page navigation)
-        navLinks.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            const icon = menuToggle.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-            menuToggle.setAttribute('aria-expanded', 'false');
-          });
-        });
-      }
-    });
+        // Function to apply the saved theme on page load
+        const applyTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+        };
 
-  </script>
-
-  <a href="index.html" id="backToHomeBtn" title="Go to Home">
-    &#x2191; </a>
-  <script>
-    const backToHomeBtn = document.getElementById("backToHomeBtn");
-
-    // Define the IDs of your sections in the order they appear on the page, from top to bottom
-    const sectionIds = [
-      "home-section",
-      "about-section",
-      "services-section",
-      "contact-section"
-      // Add all your section IDs here in their correct order
-    ];
-
-    // Function to get the ID of the currently visible section
-    function getCurrentSectionId() {
-      let currentSection = null;
-      // Check sections from bottom to top to find the highest one visible
-      for (let i = sectionIds.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sectionIds[i]);
-        if (section) {
-          const rect = section.getBoundingClientRect();
-          // If the top of the section is visible in the viewport (or slightly above)
-          if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.5) {
-            currentSection = sectionIds[i];
-            break;
-          }
+        // Check if the button exists before adding a listener
+        if (themeToggleButton) {
+            themeToggleButton.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                // Save the current theme preference to localStorage
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
         }
-      }
-      return currentSection;
-    }
 
-    // Function to scroll to the previous section
-    function scrollToPreviousSection() {
-      const currentSectionId = getCurrentSectionId();
-      const currentIndex = sectionIds.indexOf(currentSectionId);
+        // Apply the theme when the page first loads
+        applyTheme();
 
-      if (currentIndex > 0) { // If there's a previous section
-        const previousSectionId = sectionIds[currentIndex - 1];
-        const previousSection = document.getElementById(previousSectionId);
-        if (previousSection) {
-          previousSection.scrollIntoView({
-            behavior: 'smooth', // For smooth scrolling
-            block: 'start'      // Align the top of the element with the top of the viewport
-          });
+
+        // --- 2. MOBILE MENU TOGGLE ---
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    menuToggle.setAttribute('aria-expanded', 'true');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Close the menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
         }
-      } else {
-        // If already at the first section, scroll to the very top of the page
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
+
+
+        // --- 3. BACK TO TOP / SCROLL UP BUTTON ---
+        const backToHomeBtn = document.getElementById("backToHomeBtn");
+        
+        // IMPORTANT: Update this array with the actual IDs of your sections in order.
+        const sectionIds = [
+            "hero", // Assuming the hero section is the top
+            "about",
+            "skills",
+            "projects",
+            "experience",
+            "webinars",
+            "leadership",
+            "testimonials",
+            "social-hub",
+            "Fitness",
+            "contact"
+        ];
+        
+        // Show/hide button on scroll
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToHomeBtn.style.display = "block";
+            } else {
+                backToHomeBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to top on click
+        backToHomeBtn.addEventListener("click", function (event) {
+            event.preventDefault(); 
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-      }
-    }
 
-    // Show/hide button on scroll
-    window.onscroll = function () {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        backToHomeBtn.style.display = "block";
-      } else {
-        backToHomeBtn.style.display = "none";
-      }
-    };
-
-    // Add click event listener to the button
-    backToHomeBtn.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent default anchor behavior (jumping directly)
-      scrollToPreviousSection();
     });
-  </script>
+</script>
 </body>
 
 </html>
