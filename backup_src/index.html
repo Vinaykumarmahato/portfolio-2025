@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinay Kumar Mahato - Leading Java Architect, AI Innovator & Global Educator | Aiming for No. 1 by 2030</title>
+  <meta name="description"
+    content="Official portfolio of Vinay Kumar Mahato, a Java Full Stack Developer, AI Innovator, Educator, and Entrepreneur. Showcasing projects, experience, contributions, webinars, certificates, and social presence towards becoming a top global tech leader by 2030.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Segoe+UI:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="site-logo">
+                <img src="img/logo.png" alt="Vinay Kumar Mahato Logo" class="navbar-logo">
+            </a>
+            <div class="nav-menu">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="certificate.html">Certificates</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#webinars">Webinars</a></li>
+                    <li><a href="index.html#leadership">Courses</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="Fitness.html">Fitness</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+  <div class="global-flying-container">
+    <!-- Global Butterflies -->
+    <div class="global-flying-element butterfly-global"></div>
+    <div class="global-flying-element butterfly-global"></div>
+    <div class="global-flying-element butterfly-global"></div>
+    <div class="global-flying-element butterfly-global"></div>
+    <div class="global-flying-element butterfly-global"></div>
+    <div class="global-flying-element butterfly-global"></div>
+    <div class="global-flying-element butterfly-global"></div>
+    <div class="global-flying-element butterfly-global"></div>
+    <!-- Global Stars -->
+    <div class="global-flying-element star-global"></div>
+    <div class="global-flying-element star-global"></div>
+  </div>
+
+  <section class="hero">
+    <div class="hero__decor-circle"></div>
+    <div class="hero__decor-glow"></div>
+
+    <div class="hero__content">
+      <div class="hero__text">
+        <h1>Hi, I'm <span class="gradient-text">Vinay Kumar Mahato</span> <span class="wave">👋</span></h1>
+        <p class="subtitle">Java Full Stack Architect | AI ML Innovator | Global Tech Educator | Entrepreneur | Fitness
+          Influencer</p>
+        <p class="subline">🚀 Founder & CEO @ Inoglle Technologies | 👨‍🏫 ADV Indian Coder (500K+ learners) | 📢 Tech
+          Mentor & Author</p>
+        <div class="social-icons">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" /></a>
+      <a href="https://www.youtube.com/@ADVIndianCoder-i9y"><img
+        src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Gmail" /></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" /></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+        </div>
+
+
+      </div>
+
+
+<!-- ====================================================== -->
+<!-- BEGIN: VINAY KUMAR PODCAST PLAYER SECTION -->
+<!-- ====================================================== -->
+<div id="vk-podcast-container">
+
+    <!-- 1. HTML STRUCTURE -->
+    <audio id="vk-audio-player" src="Vinay Kumar Podcast.mp3"></audio>
+
+    <div class="vk-modal-overlay" id="vk-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="vk-modal-title">
+        <div class="vk-modal-content">
+            <button class="vk-close-btn" id="vk-close-modal" aria-label="Close dialog">&times;</button>
+            <div class="vk-icon">🎧</div>
+            <h2 id="vk-modal-title">Enjoy The Podcast?</h2>
+            <p id="vk-modal-description">Click below to listen to the <strong>Vinay Kumar Podcast</strong> while you explore the site!</p>
+            <button class="vk-play-btn" id="vk-play-btn">
+                ▶&nbsp; Play Podcast
+            </button>
+        </div>
+    </div>
+
+    <button class="vk-audio-toggle-btn" id="vk-audio-toggle-btn" aria-label="Mute or unmute audio" style="display: none;">
+        <span id="vk-audio-icon">🔊</span>
+    </button>
+    
+    <!-- 2. STYLES (Scoped to this container) -->
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        /* Scoped styles to prevent conflicts with your existing page */
+        #vk-podcast-container {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        #vk-podcast-container .vk-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(10, 20, 40, 0.5);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: grid;
+            place-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        #vk-podcast-container .vk-modal-overlay.is-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #vk-podcast-container .vk-modal-content {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e0e7ff 100%);
+            border-radius: 24px;
+            padding: 32px 40px;
+            max-width: 480px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 123, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transform: scale(0.95);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        #vk-podcast-container .vk-modal-overlay.is-visible .vk-modal-content {
+            transform: scale(1);
+        }
+        
+        
+        #vk-podcast-container .vk-icon {
+            font-size: 3.5rem;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        #vk-podcast-container #vk-modal-title {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 1.75rem;
+            margin: 0 0 12px 0;
+        }
+
+        #vk-podcast-container #vk-modal-description {
+            color: #576574;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0 0 28px 0;
+        }
+
+        #vk-podcast-container .vk-close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: transparent;
+            border: none;
+            font-size: 2rem;
+            font-weight: 300;
+            color: #99aab7;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        #vk-podcast-container .vk-close-btn:hover {
+            color: #2c3e50;
+            transform: rotate(90deg);
+        }
+
+        #vk-podcast-container .vk-play-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.15);
+            transition: all 0.3s ease;
+            outline-offset: 4px;
+        }
+
+        #vk-podcast-container .vk-play-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.15);
+        }
+
+        #vk-podcast-container .vk-play-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        #vk-podcast-container .vk-audio-toggle-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            border-radius: 50%;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            z-index: 9998; /* Lower than modal overlay */
+            transition: transform 0.2s ease;
+        }
+
+        #vk-podcast-container .vk-audio-toggle-btn:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 600px) {
+            #vk-podcast-container .vk-modal-content {
+                padding: 32px 24px;
+            }
+            #vk-podcast-container #vk-modal-title {
+                font-size: 1.5rem;
+            }
+            #vk-podcast-container .vk-play-btn {
+                padding: 12px 28px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</div>
+
+<!-- 3. JAVASCRIPT LOGIC -->
+<script>
+    // Self-invoking function to avoid global scope pollution
+    (function() {
+        const container = document.getElementById('vk-podcast-container');
+        if (!container) return; // Stop if the container is not found
+
+        // Select all elements within the container
+        const audioPlayer = container.querySelector('#vk-audio-player');
+        const modalOverlay = container.querySelector('#vk-modal-overlay');
+        const playBtn = container.querySelector('#vk-play-btn');
+        const closeBtn = container.querySelector('#vk-close-modal');
+        const audioToggleBtn = container.querySelector('#vk-audio-toggle-btn');
+        const audioIcon = container.querySelector('#vk-audio-icon');
+
+        function showModal() {
+            if(modalOverlay) modalOverlay.classList.add('is-visible');
+        }
+
+        function hideModal() {
+            if(modalOverlay) modalOverlay.classList.remove('is-visible');
+        }
+
+        function updateAudioIcon() {
+            if(audioIcon && audioPlayer) {
+                audioIcon.textContent = audioPlayer.muted ? '🔇' : '🔊';
+            }
+        }
+
+        if(playBtn) {
+            playBtn.addEventListener('click', function() {
+                if(audioPlayer) {
+                    audioPlayer.muted = false;
+                    audioPlayer.volume = 1.0;
+                    audioPlayer.play().catch(error => console.error("Audio play failed:", error));
+                }
+                hideModal();
+                if(audioToggleBtn) audioToggleBtn.style.display = 'grid';
+                updateAudioIcon();
+            });
+        }
+        
+        if(audioToggleBtn) {
+            audioToggleBtn.addEventListener('click', function() {
+                if(audioPlayer) {
+                    audioPlayer.muted = !audioPlayer.muted;
+                    updateAudioIcon();
+                }
+            });
+        }
+        
+        if(closeBtn) closeBtn.addEventListener('click', hideModal);
+
+        if(modalOverlay) {
+            modalOverlay.addEventListener('click', function(event) {
+                if (event.target === modalOverlay) {
+                    hideModal();
+                }
+            });
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('is-visible')) {
+                hideModal();
+            }
+        });
+
+        // Show the modal after a 1-second delay
+        setTimeout(showModal, 1000);
+        updateAudioIcon();
+    })();
+</script>
+<!-- ====================================================== -->
+<!-- END: VINAY KUMAR PODCAST PLAYER SECTION -->
+<!-- ====================================================== -->
+
+
+      <!-- This is the updated hero__image-container that wraps your existing hero__image -->
+      <div class="hero__image-container">
+        <div class="hero__image">
+          <!-- Using your provided image path -->
+          <img src="/img/pro.jpg" alt="Vinay Kumar Mahato" />
+        </div>
+        <!-- Butterfly elements - these will be animated -->
+        <div class="flying-element butterfly"></div>
+        <div class="flying-element butterfly"></div>
+        <div class="flying-element butterfly"></div>
+        <!-- Star elements - these will be animated -->
+        <div class="flying-element star"></div>
+        <div class="flying-element star"></div>
+        <div class="flying-element star"></div>
+      </div>
+    </div>
+  </section>
+
+<section id="about" class="about-section-modern">
+    <h2>About Me: Pioneering Tech, Fitness & Impact</h2>
+
+    <div class="about-grid">
+        <div class="about-intro">
+            <!-- <img src="img/about." alt="About Me Illustration" class="about-image"> -->
+            <p>I’m <strong>Vinay Kumar Mahato</strong>, a passionate technologist, innovator, and educator, dedicated to solving real-world problems through smart, scalable tech solutions. As the <strong>Founder & CEO of Inoglle</strong>, I lead impactful digital transformation using full-stack development, AI, and IT consulting. I’m also committed to shaping the next generation of tech leaders through my platform <strong>ADV Indian Coder</strong>.</p>
+            <p>After successfully reaching thousands through my original YouTube channel, I’ve made a bold decision to start fresh. My <strong>new YouTube journey</strong> has just begun — with a sharper focus, clearer content strategy, and an unwavering goal: to deliver high-quality, fast-paced tutorials that empower learners worldwide.</p>
+        </div>
+
+        <div class="about-highlights-modern">
+            
+            <div class="highlight-item">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
+                </div>
+                <p><strong>Education:</strong> B.Tech in Information Technology, Anna University (2021–2025)</p>
+            </div>
+            
+            <div class="highlight-item">
+                 <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.07a2.25 2.25 0 0 1-2.25 2.25H5.625a2.25 2.25 0 0 1-2.25-2.25v-4.07a2.25 2.25 0 0 1 .97-1.732l5.25-3.236a2.25 2.25 0 0 1 2.56 0l5.25 3.236a2.25 2.25 0 0 1 .97 1.732Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6.75v-2.5a2.25 2.25 0 0 0-2.25-2.25H10.5a2.25 2.25 0 0 0-2.25 2.25v2.5" /></svg>
+                </div>
+                <p><strong>Current Roles:</strong> CEO @ Inoglle | Tech Lead @ ADV SparkTech | Educator @ ADV Indian Coder</p>
+            </div>
+
+            <div class="highlight-item">
+                <div class="icon">
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 12" /></svg>
+                </div>
+                <p><strong>Core Skills:</strong> Java, Spring Boot, REST API, Hibernate, MySQL, Git, JavaScript, Full-Stack Engineering</p>
+            </div>
+            
+            <div class="highlight-item">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" /></svg>
+                </div>
+                <p><strong>Achievements:</strong> 40% delivery efficiency increase, 25% client scalability improvement, 20+ internships</p>
+            </div>
+            
+            <div class="highlight-item">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.82m5.84-2.56a12.02 12.02 0 0 0-5.84 0m5.84 0a12.02 12.02 0 0 1-5.84 0M12 12.75a6 6 0 0 0-5.84-7.38v4.82m5.84 2.56a12.02 12.02 0 0 1 5.84 0M12 12.75a6 6 0 0 1 5.84-7.38v4.82M18.364 5.636l-1.414 1.414M5.636 5.636l1.414 1.414m12.728 0-1.414-1.414M5.636 18.364l1.414-1.414M12 21.75v-4.82m0 0a6 6 0 0 0 0-10.5m0 10.5a6 6 0 0 1 0-10.5" /></svg>
+                </div>
+                <p><strong>Mission:</strong> To empower 10M+ learners and become a top 1% global innovator by 2030.</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="about-repos">
+        <h3>📚 Explore My GitHub Learning Repositories</h3>
+        <div class="repo-grid">
+            <a href="https://github.com/Vinaykumarmahato/Java_Basics_Exploration_Revision" target="_blank" class="repo-card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg" alt="GitHub Icon" class="github-icon">
+                <div>
+                    <h4>Java Fundamentals</h4>
+                    <p>Java_Basics_Exploration_Revision</p>
+                </div>
+            </a>
+            <a href="https://github.com/Vinaykumarmahato/MySQL_Zero_to_Hero" target="_blank" class="repo-card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg" alt="GitHub Icon" class="github-icon">
+                <div>
+                    <h4>MySQL Masterclass</h4>
+                    <p>MySQL_Zero_to_Hero</p>
+                </div>
+            </a>
+            <a href="https://github.com/Vinaykumarmahato/Java-Collection-Framework-Exploration" target="_blank" class="repo-card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg" alt="GitHub Icon" class="github-icon">
+                <div>
+                    <h4>Java Collections Deep Dive</h4>
+                    <p>Java-Collection-Framework-Exploration</p>
+                </div>
+            </a>
+            <a href="https://github.com/Vinaykumarmahato/OOP_Fortress_Exploration_Revision" target="_blank" class="repo-card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg" alt="GitHub Icon" class="github-icon">
+                <div>
+                    <h4>OOP Fortress</h4>
+                    <p>OOP_Fortress_Exploration_Revision</p>
+                </div>
+            </a>
+            <a href="https://github.com/Vinaykumarmahato/Crack-Java-Interviews" target="_blank" class="repo-card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg" alt="GitHub Icon" class="github-icon">
+                <div>
+                    <h4>Java Interview Prep</h4>
+                    <p>Crack-Java-Interviews</p>
+                </div>
+            </a>
+            <a href="https://github.com/Vinaykumarmahato/Google-Online-Assessment-Solution-in-java" target="_blank" class="repo-card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg" alt="GitHub Icon" class="github-icon">
+                <div>
+                    <h4>Google OA Solutions</h4>
+                    <p>Google-Online-Assessment-Solution</p>
+                </div>
+            </a>
+            </div>
+        <p class="repo-footer">
+            🚀 <strong>Let’s learn and grow together</strong> — these open-source repositories are built to help students and developers master real-world software skills.
+        </p>
+    </div>
+</section>
+
+
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2>Core Competencies & Technical Stack</h2>
+      <img src="img/SKILLS.png" alt="Skills Header Image" class="skills-header-image">
+
+      <div class="skills-grid">
+
+        <div class="skills-category">
+          <img src="img/java.png" alt="Java Icon" class="skill-icon">
+          <h3>Programming Languages:</h3>
+          <ul>
+            <li><strong>Java</strong> (Core, J2EE, JDBC, Servlets)</li>
+            <li><strong>JavaScript</strong> (DOM, UI interactivity)</li>
+            <li><strong>Python</strong> (Beginner – Learning phase)</li>
+            <li><strong>SQL</strong> (MySQL – Advanced CRUD, Joins, Triggers)</li>
+            <li><strong>HTML/CSS</strong> (Responsive Design)</li>
+          </ul>
+        </div>
+
+        <div class="skills-category">
+          <img src="img/framework.png" alt="Frameworks Icon" class="skill-icon">
+          <h3>Frameworks & Libraries:</h3>
+          <ul>
+            <li><strong>Spring Boot</strong>, Spring MVC, Spring Security</li>
+            <li><strong>Hibernate</strong>, JPA</li>
+            <li><strong>JSP/Servlets</strong></li>
+            <li><strong>Bootstrap</strong> (Frontend Styling)</li>
+          </ul>
+        </div>
+
+        <div class="skills-category">
+          <img src="img/database-storage.png" alt="Database Icon" class="skill-icon">
+          <h3>Databases:</h3>
+          <ul>
+            <li><strong>MySQL</strong> (DDL, DML, Triggers, Indexing)</li>
+            <li>Oracle (Basics)</li>
+            <!-- Removed MongoDB as per request -->
+          </ul>
+        </div>
+
+        <div class="skills-category">
+          <img src="img/devops.png" alt="DevOps Icon" class="skill-icon">
+          <h3>DevOps & Tools:</h3>
+          <ul>
+            <li><strong>Docker</strong> (Containerization)</li>
+            <li><strong>Kubernetes</strong> (Basics – Deployment & Scaling)</li>
+            <li><strong>CI/CD Pipelines</strong> (GitHub Actions, Jenkins Basics)</li>
+            <li><strong>Jira</strong> (Agile Project Management)</li>
+            <li><strong>Git & GitHub</strong> (Version Control)</li>
+            <li><strong>Maven</strong> (Build Tool)</li>
+          </ul>
+        </div>
+
+        <div class="skills-category">
+          <img src="img/requirements.png" alt="Soft Skills Icon" class="skill-icon">
+          <h3>Soft Skills & Leadership:</h3>
+          <ul>
+            <li><strong>Mentorship</strong> – Educating 500K+ Learners</li>
+            <li><strong>Leadership</strong> – CEO @ Inoglle, Tech Lead @ ADV SparkTech</li>
+            <li><strong>Public Speaking</strong> – Workshops, Conferences</li>
+            <li><strong>Content Creation</strong> – Programming Tutorials (New Channel)</li>
+          </ul>
+        </div>
+
+        <div class="skills-category">
+          <img src="img/fitness.png" alt="Fitness Icon" class="skill-icon">
+          <h3>Fitness & Lifestyle:</h3>
+          <ul>
+            <li>🏋️‍♂️ Regular Gym (5:30–6:50 PM)</li>
+            <li>🥗 Balanced Diet (Hostel setup)</li>
+            <li>🧠 Mental Focus & Discipline</li>
+            <li>💪 Fitness + Tech Motivation</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2>Signature Projects & Innovations</h2>
+      <p class="section-intro">Highlighting impactful solutions and pioneering work that demonstrates leadership and
+        measurable results.</p>
+
+      <div class="project-grid">
+
+        <!-- Homemade Food Marketplace -->
+        <div class="project-card">
+          <img src="img/home mad.png" alt="Homemade Food Platform" class="project-screenshot">
+          <h3>Homemade Food Marketplace</h3>
+          <p class="project-description">Developed a full-stack platform connecting home cooks with customers to order
+            healthy, affordable homemade meals. Includes secure login, order tracking, payment integration, and customer
+            feedback system.</p>
+          <p class="project-stack">Stack: Java, Spring Boot, Hibernate, React, MySQL</p>
+          <div class="project-links">
+            <a href="https://github.com/Vinaykumarmahato/homemade-food-marketplace" target="_blank">GitHub Repo</a>
+          </div>
+        </div>
+
+        <!-- QuickServe Online -->
+        <div class="project-card">
+          <img src="img/quick service.png" alt="QuickServe Online Project" class="project-screenshot">
+          <h3>QuickServe Online (In Progress)</h3>
+          <p class="project-description">A local e-service marketplace offering bookings for services like printing,
+            repairs, and more. Features AI recommendations, chatbot assistance, and fraud detection for customer safety.
+          </p>
+          <p class="project-stack">Stack: Java, Spring Boot, React, MySQL, Python, Scikit-learn, TensorFlow, OpenCV</p>
+          <div class="project-links">
+            <a href="https://github.com/Vinaykumarmahato/quickserve-online" target="_blank">GitHub Repo</a>
+          </div>
+        </div>
+
+        <!-- L-EduTrack AI Platform -->
+        <div class="project-card">
+          <img src="img/Edutrack.png" alt="L-EduTrack AI Learning" class="project-screenshot">
+          <h3>L-EduTrack AI Learning Platform</h3>
+          <p class="project-description">An AI-powered gamified learning platform offering personalized learning paths,
+            real-time analytics, and a community-driven ecosystem for student engagement and growth.</p>
+          <p class="project-stack">Stack: Java, Spring Boot, Microservices, MySQL, React, AI Models</p>
+          <div class="project-links">
+            <a href="https://github.com/Vinaykumarmahato/L-EduTrack-AI-Learning-Platform" target="_blank">GitHub
+              Repo</a>
+          </div>
+        </div>
+
+
+
+        <!-- AI Mock Interview Platform -->
+        <div class="project-card">
+          <img src="img/ai moc.png" alt="AI Interview Platform" class="project-screenshot">
+          <h3>AI Mock Interview Platform</h3>
+          <p class="project-description">
+            Simulates real-world interview experiences using AI, helping users practice coding, behavioral, and system
+            design interviews with instant feedback and analytics.
+          </p>
+          <p class="project-stack">Stack: Java Spring Boot, React.js, Node.js, GPT (OpenAI API), MongoDB, Docker</p>
+          <div class="project-links">
+            <a href="https://github.com/Vinaykumarmahato/AI-Mock-Interview-Platform" target="_blank">GitHub Repo</a>
+          </div>
+        </div>
+
+
+        <!-- 50+ AI Frontend Websites -->
+        <div class="project-card">
+          <img src="img/50 project.png" alt="AI Frontend Projects" class="project-screenshot">
+          <h3>50+ AI-Generated Frontend Websites</h3>
+          <p class="project-description">Designed and developed 50+ stunning frontend websites using AI design tools,
+            modern HTML/CSS/JS techniques, and creative UI principles. All source code available for inspiration and
+            use.</p>
+          <p class="project-stack">Stack: HTML, CSS, JavaScript, AI Design Tools (Canva, UIzard, etc.)</p>
+          <div class="project-links">
+            <a href="https://github.com/Vinaykumarmahato/Frontend-AI-Projects" target="_blank">GitHub Collection</a>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <h2>Professional Experience & Leadership Journey</h2>
+      <div class="timeline">
+
+        <!-- Inoglle Technologies -->
+        <div class="timeline-item">
+          <h3>Founder & CEO – Inoglle Technologies</h3>
+          <p class="duration">Feb 2024 – Present</p>
+          <ul>
+            <li>Led full-stack software development, increasing project delivery efficiency by 40%.</li>
+            <li>Provided IT consulting that improved client infrastructure scalability by 25%.</li>
+            <li>Launched internship/training programs for 100+ learners in Java, Python & Cloud.</li>
+          </ul>
+          <!-- <img src="https://via.placeholder.com/80x80/007bff/FFFFFF?text=Inoglle+Logo" alt="Inoglle Technologies Logo"
+            class="company-logo"> -->
+        </div>
+
+        <!-- ADV SparkTech -->
+        <div class="timeline-item">
+          <h3>Technical Lead & Organizer – ADV SparkTech (GDSC Chapter)</h3>
+          <p class="duration">Jan 2024 – Present</p>
+          <ul>
+            <li>Organized 10+ workshops and hackathons with 75% improvement in participants’ skills.</li>
+            <li>Guided 500+ students in real-world projects using JavaScript, Python, and React.</li>
+            <li>Hosted career mentoring sessions leading to multiple student internships and jobs.</li>
+          </ul>
+          <!-- <img src="https://via.placeholder.com/80x80/28a745/FFFFFF?text=SparkTech" alt="ADV SparkTech Logo"
+            class="company-logo"> -->
+        </div>
+
+        <!-- ADV Indian Coder -->
+        <div class="timeline-item">
+          <h3>Founder, Educator & YouTuber – ADV Indian Coder</h3>
+          <p class="duration">Jan 2022 – Present</p>
+          <ul>
+            <li>Created 150+ coding tutorials (Java, DSA, Python) with 50K+ subscribers and growing.</li>
+            <li>Helped over 2,000 learners get certified and placed through specialized playlists.</li>
+            <li>Boosted engagement by 35% with project-based learning content.</li>
+          </ul>
+          <!-- <img src="https://via.placeholder.com/80x80/dc3545/FFFFFF?text=ADV+Logo" alt="ADV Indian Coder Logo"
+            class="company-logo"> -->
+        </div>
+
+        <!-- ADV HopeHaven -->
+        <div class="timeline-item">
+          <h3>Founder & Social Impact Director – ADV HopeHaven (NGO)</h3>
+          <p class="duration">Jan 2024 – Aug 2024</p>
+          <ul>
+            <li>Led 50+ outreach programs, impacting 10,000+ lives in education, health, and housing.</li>
+            <li>Built a national volunteer network of 300+ individuals and raised funding by 20%.</li>
+          </ul>
+          <!-- <img src="https://via.placeholder.com/80x80/ff6f61/FFFFFF?text=HopeHaven" alt="ADV HopeHaven Logo"
+            class="company-logo"> -->
+        </div>
+
+        <!-- Freelance via Upwork -->
+        <div class="timeline-item">
+          <h3>Freelance Developer & Writer – Upwork</h3>
+          <p class="duration">Dec 2023 – May 2024</p>
+          <ul>
+            <li>Authored 50+ technical articles, increasing client website traffic by 30%.</li>
+            <li>Developed full-stack apps using Java, Python, and MySQL for global clients.</li>
+          </ul>
+          <!-- <img src="https://via.placeholder.com/80x80/17a2b8/FFFFFF?text=Upwork" alt="Upwork Logo" class="company-logo"> -->
+        </div>
+
+        <!-- Java Internships -->
+        <div class="timeline-item">
+          <h3>Java Developer Intern – PW Skills, InternBug, LetsGrowMore</h3>
+          <p class="duration">Feb 2023 – Aug 2023</p>
+          <ul>
+            <li>Developed scalable Java applications with APIs and backend integrations.</li>
+            <li>Collaborated in Agile environments with focus on clean, testable code.</li>
+          </ul>
+          <!-- <img src="https://via.placeholder.com/80x80/ffc107/343a40?text=Java+Intern" alt="Java Internship Logo"
+            class="company-logo"> -->
+        </div>
+
+        <!-- Web Development Internships -->
+        <div class="timeline-item">
+          <h3>Web Developer Intern – TechnoHacks, OctaNet, LGM, Oasis, etc.</h3>
+          <p class="duration">Jan 2023 – Oct 2023</p>
+          <ul>
+            <li>Built responsive websites using HTML, CSS, JavaScript, and integrated APIs.</li>
+            <li>Worked on UI/UX improvements and dynamic content for real projects.</li>
+          </ul>
+          <!-- <img src="https://via.placeholder.com/80x80/6610f2/FFFFFF?text=Web+Dev" alt="Web Dev Logo"
+            class="company-logo"> -->
+        </div>
+
+        <!-- Power BI Apprentice -->
+        <div class="timeline-item">
+          <h3>Power BI Apprentice – WsCube Tech</h3>
+          <p class="duration">Sep 2023 – Oct 2023</p>
+          <ul>
+            <li>Designed interactive dashboards and optimized data models.</li>
+            <li>Enhanced business insights with clear visualization and transformation.</li>
+          </ul>
+          <!-- <img src="https://via.placeholder.com/80x80/6f42c1/FFFFFF?text=BI" alt="Power BI Logo" class="company-logo"> -->
+        </div>
+
+        <!-- Mentoring Role -->
+        <div class="timeline-item">
+          <h3>Mentor – Sant Kabir Coaching Centre</h3>
+          <p class="duration">Apr 2017 – Jul 2021</p>
+          <ul>
+            <li>Taught Physics, Chemistry, Biology & English to 8th–12th-grade students.</li>
+            <li>Fostered a values-based, tech-enabled, interactive classroom environment.</li>
+          </ul>
+          <!-- <img src="https://via.placeholder.com/80x80/20c997/FFFFFF?text=Mentor" alt="Mentor Logo" class="company-logo"> -->
+        </div>
+
+        <!-- Director Role -->
+        <div class="timeline-item">
+          <h3>Director – Vinay Sir Tutorial GS Research</h3>
+          <p class="duration">Feb 2020 – Mar 2021</p>
+          <ul>
+            <li>Led curriculum development and research initiatives.</li>
+            <li>Oversaw educator teams and drove academic performance strategy.</li>
+          </ul>
+          <!-- <img src="https://via.placeholder.com/80x80/fcbf49/FFFFFF?text=Director" alt="Tutorial Logo"
+            class="company-logo"> -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="webinars" class="webinars-section">
+    <div class="container">
+      <h2>Webinars, Workshops & Guest Lectures</h2>
+
+      <div class="section-intro">
+        <p>Sharing knowledge and inspiring the next generation of tech leaders through engaging sessions and interactive
+          workshops.</p>
+      </div>
+
+      <h3>Upcoming Sessions:</h3>
+      <div class="upcoming-events-grid">
+
+        <!-- Event 1: ChatGPT Mastery -->
+        <div class="event-card">
+          <img src="img/ChatGPT Mastery.png" alt="ChatGPT Webinar Thumbnail">
+          <h4>ChatGPT Mastery: Unlock AI Productivity</h4>
+          <p><strong>Date:</strong> August 5, 2025</p>
+          <p><strong>Platform:</strong> Zoom / Google Meet</p>
+          <p><strong>Description:</strong> Learn how to use ChatGPT effectively for coding, learning, resume writing,
+            and personal productivity.</p>
+          <p><strong style="color:green;">✅ 100% Free | 📒 Complete Notes Provided</strong></p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="event-link">Register Now</a>
+        </div>
+
+        <!-- Event 2: LinkedIn & GitHub Personal Branding -->
+        <div class="event-card">
+          <img src="img/LinkedIn & GitHub Profile Webinar.png" alt="LinkedIn GitHub Webinar">
+          <h4>Create a Professional LinkedIn & GitHub Profile</h4>
+          <p><strong>Date:</strong> August 10, 2025</p>
+          <p><strong>Platform:</strong> Google Meet</p>
+          <p><strong>Description:</strong> Step-by-step guide to optimize your LinkedIn and GitHub for tech careers and
+            job opportunities.</p>
+          <p><strong style="color:green;">✅ 100% Free | 📒 Complete Notes Provided</strong></p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="event-link">Join Now</a>
+        </div>
+
+        <!-- Event 3: Docker Crash Course -->
+        <div class="event-card">
+          <img src="img/Docker Crash Course for Beginners.png" alt="Docker Workshop Thumbnail">
+          <h4>Docker Crash Course for Beginners</h4>
+          <p><strong>Date:</strong> August 15, 2025</p>
+          <p><strong>Platform:</strong> Zoom</p>
+          <p><strong>Description:</strong> Learn how to containerize applications using Docker and understand DevOps
+            basics.</p>
+          <p><strong style="color:green;">✅ 100% Free | 📒 Complete Notes Provided</strong></p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="event-link">Get Details</a>
+        </div>
+
+        <!-- Event 4: MySQL Zero to Hero -->
+        <div class="event-card">
+          <img src="img/MySQL Zero to Hero Webinar.png" alt="MySQL Webinar Thumbnail">
+          <h4>MySQL Zero to Hero: Beginner to Advanced</h4>
+          <p><strong>Date:</strong> August 20, 2025</p>
+          <p><strong>Platform:</strong> Google Meet</p>
+          <p><strong>Description:</strong> From writing basic queries to designing database projects — complete MySQL
+            journey.</p>
+          <p><strong style="color:green;">✅ 100% Free | 📒 Complete Notes Provided</strong></p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="event-link">Reserve Seat</a>
+        </div>
+
+        <!-- Event 5: Java Basics Bootcamp -->
+        <div class="event-card">
+          <img src="img/Java Basics Bootcamp.png" alt="Java Bootcamp Thumbnail">
+          <h4>Java Basics Bootcamp for Beginners</h4>
+          <p><strong>Date:</strong> August 25-27, 2025</p>
+          <p><strong>Platform:</strong> Zoom</p>
+          <p><strong>Description:</strong> Learn Java fundamentals with practical examples, OOPs concepts, and
+            project-oriented learning.</p>
+          <p><strong style="color:green;">✅ 100% Free | 📒 Complete Notes Provided</strong></p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="event-link">Enroll Now</a>
+        </div>
+
+      </div>
+
+      <h3>Past Guest Lectures & Workshops:</h3>
+      <div class="past-events-grid">
+
+        <!-- Rrase College -->
+        <div class="guest-lecture-card">
+          <img src="img/prase college.jpg" alt="Rrase College Logo" class="college-logo">
+          <h4>"Strategies for Future Success" – Rrase College of Engineering</h4>
+          <p class="event-date">February 10, 2025</p>
+          <p class="event-description">Delivered an inspirational guest talk about mindset, skills, and career roadmap
+            for future tech leaders.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="view-details">Read Highlights</a>
+        </div>
+
+        <!-- LinkedIn Audio Room -->
+        <div class="guest-lecture-card">
+          <img src="img/linkedin event.jpg" alt="Audio Session" class="college-logo">
+          <h4>"HR x Tech Insights – Skills for Tomorrow"</h4>
+          <p class="event-date">March 2, 2025</p>
+          <p class="event-description">Speaker in a live LinkedIn Audio Session discussing tech skills hiring managers
+            look for in 2025.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="view-details">Listen on LinkedIn</a>
+        </div>
+
+        <!-- Java Workshop Hosted -->
+        <div class="guest-lecture-card">
+          <img src="img/java past webinar.jpg" alt="Java Webinar at DSCET" class="college-logo">
+          <h4>"Unlocking the Power of Java" – Dhanalakshmi Srinivasan College of Engineering</h4>
+          <p class="event-date">March 19–20, 2024</p>
+          <p class="event-description">Offline Java Webinar focused on core Java development. Students received
+            certificates and built foundational Java knowledge. Hosted by Vinay Kumar.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="view-details">Download Notes</a>
+        </div>
+
+
+        <!-- Online Presence Enhancement -->
+        <div class="guest-lecture-card">
+          <img src="img/linkedin profile creation past.jpg" alt="LinkedIn & GitHub Workshop Poster" class="college-logo">
+          <h4>"Build Your Online Presence for Career Success"</h4>
+          <p class="event-date">September 28, 2025</p>
+          <p class="event-description">Live workshop for students on LinkedIn, GitHub, and digital branding to boost
+            visibility and job readiness. 100% Free with complete notes provided.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="view-details">Download Notes</a>
+        </div>
+
+
+      </div>
+
+      <div class="invite-cta">
+        <h3>Want Me to Speak at Your Institution?</h3>
+        <p>I'm passionate about sharing knowledge on Java, AI, Blockchain, Microservices, and career growth.</p>
+        <a href="https://topmate.io/vinaykumar/1247928/pay?utm_source=public_profile&utm_campaign=vinaykumar"
+          class="cta-button">Invite Me for a Session</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="certificate-banner" id="Certificates">
+    <!-- Left Image Section -->
+    <div class="banner-side left-side"></div>
+
+    <!-- Center Content Section -->
+    <div class="banner-center">
+      <!-- Floating Animated Squares -->
+      <div class="animated-square square-1"></div>
+      <div class="animated-square square-2"></div>
+      <div class="animated-square square-3"></div>
+      <div class="animated-square square-4"></div>
+
+      <!-- Updated heading for the banner -->
+      <h1 class="banner-text">
+        Unlock Your Potential: Explore My Certifications!
+      </h1>
+      <a href="certificate.html" class="banner-button">
+        OPEN NOW
+        <span class="mouse-icon">
+          <!-- SVG for mouse icon (or replace with your image) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-mouse-pointer">
+            <path d="M3 3l7.07 16.97 2.51-7.38L21 11.07zM10.07 10.07l3.43 3.43"></path>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="banner-side right-side"></div>
+  </section>
+
+
+
+  <section id="leadership" class="youtube-section">
+    <div class="container">
+      <h2>Thought Leadership & Global Educational Impact</h2>
+      <div class="youtube-channel-info">
+        <h3>ADV Indian Coder: Democratizing Tech Education</h3>
+        <p>🎓 Empowering learners globally with in-depth tutorials on Java, Spring Boot, Microservices, Data Structures
+          & Algorithms, AI/ML Basics, and Blockchain Development.</p>
+        <p>📺 500K+ Subscribers | 300+ Comprehensive Video Tutorials | 10M+ Total Views</p>
+        <p>🔗 <a href="https://www.youtube.com/@ADVIndianCoder" target="_blank" rel="noopener noreferrer">Visit My
+            YouTube Channel</a></p>
+        <p>📖 Published Articles & Whitepapers: [Link to your Medium/Blog/ResearchGate Profile]</p>
+        <div class="video-gallery">
+          <div class="video-thumbnail-card">
+            <img src="https://via.placeholder.com/300x180/007bff/FFFFFF?text=Spring+Boot+Tutorial"
+              alt="Spring Boot Tutorial Thumbnail">
+            <p>Spring Boot Microservices Masterclass</p>
+            <a href="https://www.youtube.com/watch?v=your-video-id-1" target="_blank">Watch Now</a>
+          </div>
+          <div class="video-thumbnail-card">
+            <img src="https://via.placeholder.com/300x180/28a745/FFFFFF?text=Blockchain+Intro"
+              alt="Blockchain Intro Thumbnail">
+            <p>Introduction to Blockchain for Developers</p>
+            <a href="https://www.youtube.com/watch?v=your-video-id-2" target="_blank">Watch Now</a>
+          </div>
+          <div class="video-thumbnail-card">
+            <img src="https://via.placeholder.com/300x180/6c757d/FFFFFF?text=DSA+Course" alt="DSA Course Thumbnail">
+            <p>Data Structures & Algorithms Full Course</p>
+            <a href="https://www.youtube.com/watch?v=your-video-id-3" target="_blank">Watch Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    const grid = document.querySelector('.testimonial-grid');
+    const scrollAmount = 320;
+
+    document.querySelector('.scroll-btn.left').onclick = () => {
+      grid.scrollLeft -= scrollAmount;
+    };
+    document.querySelector('.scroll-btn.right').onclick = () => {
+      grid.scrollLeft += scrollAmount;
+    };
+  </script>
+
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2>Voices of Impact & Endorsements</h2>
+
+      <div class="scroll-wrapper">
+
+        <div class="testimonial-track">
+          <div class="testimonial-grid">
+            <!-- ✅ Actual Testimonials -->
+            <div class="testimonial-card">
+              <img src="/Testmonials/Gayatri.png" alt="Gayatri Samal" class="testimonial-image">
+              <blockquote>"Vinay Kumar developed an exceptional e-commerce platform for us using Java..."</blockquote>
+              <p class="author">– <strong>Gayatri Samal</strong>, Infosys</p>
+            </div>
+
+            <div class="testimonial-card">
+              <img src="/Testmonials/Ahilya mam.png" alt="Ahila Mam" class="testimonial-image">
+              <blockquote>"Vinay Kumar excels in Java, Spring, and Hibernate, showcasing leadership and innovation."
+              </blockquote>
+              <p class="author">– <strong>Ahila Mam</strong>, Assistant Professor, DSCET</p>
+            </div>
+
+            <div class="testimonial-card">
+              <img src="/Testmonials/Sujata mam.jpg" alt="Sujatha Mam" class="testimonial-image">
+              <blockquote>"Vinay Kumar's analytical skills are exceptional. He breaks down complex problems expertly."
+              </blockquote>
+              <p class="author">– <strong>Sujatha Mam</strong>, Professor, Agni Engineering College</p>
+            </div>
+
+            <div class="testimonial-card">
+              <img src="/Testmonials/John peter sir.jpg" class="testimonial-image">
+              <blockquote>"Vinay’s dedication to his studies and projects is admirable. A true tech enthusiast."
+              </blockquote>
+              <p class="author">– <strong>John Petter</strong>, Professor, DSCET</p>
+            </div>
+
+            <div class="testimonial-card">
+              <img src="/Testmonials/Monika mam.jpg" alt="Monika" class="testimonial-image">
+              <blockquote>"Vinay's teaching style is engaging. I’ve gained invaluable Java and DBMS skills from him."
+              </blockquote>
+              <p class="author">– <strong>Monika</strong>, Assistant Professor, Anna University</p>
+            </div>
+
+            <div class="testimonial-card">
+              <img src="/Testmonials/Ajitha mam.jpg" alt="Ajitha Mam" class="testimonial-image">
+              <blockquote>"Vinay led our team through a challenging project, delivering high-quality results."
+              </blockquote>
+              <p class="author">– <strong>Ajitha Mam</strong>, Professor, DSCET</p>
+            </div>
+
+            <div class="testimonial-card">
+              <img src="/Testmonials/Jaypriya mam.jpg" alt="Jaypriya Mam" class="testimonial-image">
+              <blockquote>"Vinay Kumar's passion for technology is unmatched. He adopts the latest tech quickly."
+              </blockquote>
+              <p class="author">– <strong>Jaypriya Mam</strong>, Professor, DSCET</p>
+            </div>
+
+            <div class="testimonial-card">
+              <img src="/Testmonials/Savitri mam.jpg" alt="Savithri Mam" class="testimonial-image">
+              <blockquote>"Vinay’s code is clean, efficient, and well-documented. A pleasure to work with."</blockquote>
+              <p class="author">– <strong>Savithri Mam</strong>, Professor, DSCET</p>
+            </div>
+
+            <div class="testimonial-card">
+              <img src="/Testmonials/Varalakshmi Mam.jpg" alt="Varalakshmi Mam" class="testimonial-image">
+              <blockquote>"His MySQL work shows a deep understanding of database theory and practice."</blockquote>
+              <p class="author">– <strong>Varalakshmi Mam</strong>, Professor, DSCET</p>
+            </div>
+
+            <div class="testimonial-card">
+              <img src="https://via.placeholder.com/80x80/ffc107/FFFFFF?text=Deepa" alt="Deepa Mam"
+                class="testimonial-image">
+              <blockquote>"Vinay Kumar’s passion for learning is unmatched. He constantly seeks to innovate."
+              </blockquote>
+              <p class="author">– <strong>Deepa Mam</strong>, Professor, DSCET</p>
+            </div>
+
+
+
+            <!-- 🔁 Duplicate for seamless infinite scrolling -->
+            <!-- Just copy and paste all testimonial-card divs again here -->
+            <!-- For brevity, not repeating them here -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="social-hub" class="social-hub-section">
+    <div class="container">
+      <h2>My Digital Footprint & Social Hub</h2>
+      <p class="section-intro">Connect with me across various platforms to stay updated on my latest work, insights, and
+        community engagement.</p>
+
+      <div class="social-icons-grid">
+        <a href="https://www.linkedin.com/in/vinay-kumar860964" target="_blank" rel="noopener noreferrer"
+          class="social-icon-link">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Vinaykumarmahato" target="_blank" rel="noopener noreferrer"
+          class="social-icon-link">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.youtube.com/@ADVIndianCoder" target="_blank" rel="noopener noreferrer"
+          class="social-icon-link">
+          <i class="fab fa-youtube"></i>
+          <span>YouTube</span>
+        </a>
+        <a href="https://twitter.com/your_twitter_handle" target="_blank" rel="noopener noreferrer"
+          class="social-icon-link">
+          <i class="fab fa-twitter"></i>
+          <span>X (Twitter)</span>
+        </a>
+        <a href="https://www.instagram.com/vinay_kumar_mahato" target="_blank" rel="noopener noreferrer"
+          class="social-icon-link">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/your_facebook_profile" target="_blank" rel="noopener noreferrer"
+          class="social-icon-link">
+          <i class="fab fa-facebook"></i>
+          <span>Facebook</span>
+        </a>
+        <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" rel="noopener noreferrer" class="social-icon-link">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp</span>
+        </a>
+        <a href="https://topmate.io/your_topmate_link" target="_blank" rel="noopener noreferrer"
+          class="social-icon-link">
+          <i class="fas fa-handshake"></i> <span>Topmate</span>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon-link">
+          <i class="fab fa-medium"></i>
+          <span>Medium</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="fitness-overview-section" id="Fitness">
+
+    <div class="text-content order-2 md:order-1 flex flex-col items-center md:items-start text-center md:text-left">
+      <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">
+        <span class="inline-block mr-2">🏋️‍♂️</span> Fitness Lifestyle
+      </h2>
+      <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-lg">
+        Stay fit. Stay strong. <span class="inline-block ml-1">💪</span> Explore my fitness journey, routines, diet
+        tips, and transformation.
+      </p>
+      <a href="Fitness.html" class="btn-view-more
+            inline-block px-8 py-4 bg-purple-600 text-white font-bold text-lg
+            rounded-full shadow-lg hover:bg-purple-700 focus:outline-none focus:ring-4
+            focus:ring-purple-300 transition-transform transform hover:scale-105
+            duration-200
+            ">
+        Explore My Fitness Journey
+      </a>
+    </div>
+    <div class="image-content order-1 md:order-2 flex-shrink-0">
+      <!-- Replace this placeholder image URL with the actual path to your fitness photo -->
+      <img src="img/vinay fitofficial.png" alt="Vinay Kumar Fitness" class="overview-img
+                w-72 h-72 md:w-96 md:h-96 object-cover rounded-full shadow-2xl
+                border-4 border-purple-500
+                " />
+    </div>
+  </section>
+
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Let's Connect & Innovate Together</h2>
+
+
+    </div>
+  </section>
+
+  <script>
+    // Use a single event listener to run all scripts once the HTML is fully loaded.
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- 1. THEME TOGGLE (LIGHT/DARK MODE) ---
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Function to apply the saved theme on page load
+        const applyTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+        };
+
+        // Check if the button exists before adding a listener
+        if (themeToggleButton) {
+            themeToggleButton.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                // Save the current theme preference to localStorage
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        }
+
+        // Apply the theme when the page first loads
+        applyTheme();
+
+
+        // --- 2. MOBILE MENU TOGGLE ---
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    menuToggle.setAttribute('aria-expanded', 'true');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Close the menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+        }
+
+
+        // --- 3. BACK TO TOP / SCROLL UP BUTTON ---
+        const backToHomeBtn = document.getElementById("backToHomeBtn");
+        
+        // IMPORTANT: Update this array with the actual IDs of your sections in order.
+        const sectionIds = [
+            "hero", // Assuming the hero section is the top
+            "about",
+            "skills",
+            "projects",
+            "experience",
+            "webinars",
+            "leadership",
+            "testimonials",
+            "social-hub",
+            "Fitness",
+            "contact"
+        ];
+        
+        // Show/hide button on scroll
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToHomeBtn.style.display = "block";
+            } else {
+                backToHomeBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to top on click
+        backToHomeBtn.addEventListener("click", function (event) {
+            event.preventDefault(); 
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+    });
+</script>
+</body>
+
+</html>

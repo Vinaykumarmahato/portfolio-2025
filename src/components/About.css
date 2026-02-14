@@ -1,0 +1,118 @@
+/* About Section Styles */
+.about-section {
+    padding: 6rem 0;
+    background-color: var(--bg-dark);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 968px) {
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-text {
+    padding: 2rem;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-text strong {
+    color: var(--primary);
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.highlight-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+    transition: transform 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.highlight-icon {
+    color: var(--secondary);
+    background: rgba(154, 77, 255, 0.1);
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight-card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.highlight-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* GitHub Repos */
+.about-repos h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+}
+
+.repo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.repo-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+}
+
+.repo-card:hover {
+    background: rgba(74, 108, 247, 0.05);
+}
+
+.repo-card .github-icon {
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
+
+.repo-card:hover .github-icon {
+    color: var(--primary);
+}
+
+.repo-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.repo-card small {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    word-break: break-word;
+}
