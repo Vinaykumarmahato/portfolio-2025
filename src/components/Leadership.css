@@ -1,34 +1,22 @@
-/* Leadership (YouTube) Section Styles */
+/* Cyber Leadership (YouTube) Styles */
 .leadership-section {
-    padding: 6rem 0;
-    background: var(--bg-darker);
+    padding: 10rem 0;
     position: relative;
-    text-align: center;
+    background: radial-gradient(circle at 80% 20%, rgba(255, 0, 0, 0.1), transparent 50%);
 }
 
 .leadership-content {
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(2, 6, 23, 0.6) 100%);
+    background: rgba(10, 10, 30, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 0, 0, 0.2);
     padding: 4rem 2rem;
-    border-radius: 24px;
-    border: 1px solid var(--border);
-    max-width: 800px;
+    border-radius: 4px;
+    max-width: 900px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(10px);
-}
-
-.leadership-content::before {
-    content: '';
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, #ff0000 0%, transparent 70%);
-    opacity: 0.1;
-    border-radius: 50%;
-    top: -50px;
-    left: -50px;
-    filter: blur(50px);
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.1);
+    clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
 }
 
 .leadership-text {
@@ -38,63 +26,112 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    text-align: center;
 }
 
 .yt-icon {
     color: #ff0000;
-    font-size: 3rem;
+    font-size: 4rem;
+    filter: drop-shadow(0 0 20px #ff0000);
+    animation: pulse-red 2s infinite;
 }
 
 .leadership-content h2 {
-    font-size: 2.5rem;
-    color: var(--text-main);
+    font-size: 3rem;
+    font-family: var(--font-tech);
+    color: #fff;
     margin: 0;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    letter-spacing: 2px;
 }
 
 .leadership-content h3 {
     font-size: 1.5rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     font-weight: 500;
     margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 .leadership-content p {
-    color: var(--text-muted);
-    max-width: 600px;
-    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 700px;
+    line-height: 1.8;
+    font-size: 1.1rem;
 }
 
 .stats-row {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     margin: 2rem 0;
     flex-wrap: wrap;
 }
 
 .stat {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    font-size: 1.1rem;
-    color: var(--text-main);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    min-width: 150px;
+    transition: 0.3s;
+}
+
+.stat:hover {
+    background: rgba(255, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 .stat strong {
-    font-size: 1.5rem;
-    color: var(--primary);
+    font-size: 2rem;
+    color: #ff0000;
     display: block;
+    font-family: var(--font-tech);
+}
+
+.stat div {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .yt-btn {
-    background: #ff0000;
-    border: none;
-    color: white;
-    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    background: transparent;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    padding: 1rem 3rem;
+    font-family: var(--font-tech);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
 }
 
 .yt-btn:hover {
-    background: #cc0000;
-    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+    background: #ff0000;
+    color: #000;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.6);
+    transform: scale(1.05);
+}
+
+@keyframes pulse-red {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 10px #ff0000);
+    }
+
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 30px #ff0000);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 10px #ff0000);
+    }
 }

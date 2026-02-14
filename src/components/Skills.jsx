@@ -1,76 +1,92 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Layers, Database, Server, Users, Dumbbell } from 'lucide-react';
+import { Code, Database, Server, Cpu, Globe, Terminal } from 'lucide-react';
 import './Skills.css';
 
-const skillsData = [
+const skillCategories = [
     {
-        category: "Programming Languages",
+        title: "LANGUAGES",
         icon: <Code />,
-        items: ["Java (Core, J2EE, JDBC, Servlets)", "JavaScript (DOM)", "Python (Beginner)", "SQL (MySQL)", "HTML/CSS"]
+        skills: [
+            { name: "Java", level: 95 },
+            { name: "JavaScript", level: 85 },
+            { name: "Python", level: 70 },
+            { name: "SQL", level: 90 },
+            { name: "HTML/CSS", level: 90 }
+        ]
     },
     {
-        category: "Frameworks & Libraries",
-        icon: <Layers />,
-        items: ["Spring Boot, Spring MVC", "Spring Security", "Hibernate, JPA", "JSP/Servlets", "Bootstrap"]
+        title: "FRAMEWORKS",
+        icon: <Globe />,
+        skills: [
+            { name: "Spring Boot", level: 92 },
+            { name: "React", level: 80 },
+            { name: "Hibernate", level: 85 },
+            { name: "Node.js", level: 75 },
+            { name: "Bootstrap", level: 88 }
+        ]
     },
     {
-        category: "Databases",
-        icon: <Database />,
-        items: ["MySQL (Advanced)", "Oracle (Basics)"]
-    },
-    {
-        category: "DevOps & Tools",
+        title: "INFRASTRUCTURE",
         icon: <Server />,
-        items: ["Docker", "Kubernetes", "CI/CD (GitHub Actions)", "Jira", "Git & GitHub", "Maven"]
-    },
-    {
-        category: "Soft Skills & Leadership",
-        icon: <Users />,
-        items: ["Mentorship (500K+ Learners)", "CEO @ Inoglle", "Public Speaking", "Content Creation"]
-    },
-    {
-        category: "Fitness & Lifestyle",
-        icon: <Dumbbell />,
-        items: ["Regular Gym", "Balanced Diet", "Mental Focus", "Fitness + Tech Motivation"]
+        skills: [
+            { name: "Docker", level: 80 },
+            { name: "Kubernetes", level: 65 },
+            { name: "AWS", level: 70 },
+            { name: "MySQL", level: 90 },
+            { name: "Git/GitHub", level: 95 }
+        ]
     }
 ];
 
 const Skills = () => {
     return (
-        <section id="skills" className="skills-section">
+        <section id="skills" className="cyber-skills">
             <div className="container">
                 <motion.h2
                     className="section-title"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                 >
-                    Core Competencies & Technical Stack
+                    System Capabilities
                 </motion.h2>
 
-                <div className="skills-grid">
-                    {skillsData.map((skill, index) => (
+                <div className="skills-matrix">
+                    {skillCategories.map((category, index) => (
                         <motion.div
                             key={index}
-                            className="skill-card glass-panel"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            className="skill-module glass-panel"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            whileHover={{ y: -5 }}
+                            transition={{ delay: index * 0.2 }}
                         >
-                            <div className="skill-header">
-                                <div className="skill-icon-wrapper">
-                                    {skill.icon}
-                                </div>
-                                <h3>{skill.category}</h3>
+                            <div className="module-header">
+                                <span className="module-icon">{category.icon}</span>
+                                <h3>{category.title}</h3>
                             </div>
-                            <ul className="skill-list">
-                                {skill.items.map((item, i) => (
-                                    <li key={i}>{item}</li>
+
+                            <div className="skill-bars">
+                                {category.skills.map((skill, i) => (
+                                    <div key={i} className="skill-item">
+                                        <div className="skill-info">
+                                            <span>{skill.name}</span>
+                                            <span className="skill-percent">{skill.level}%</span>
+                                        </div>
+                                        <div className="progress-track">
+                                            <motion.div
+                                                className="progress-fill"
+                                                initial={{ width: 0 }}
+                                                whileInView={{ width: `${skill.level}%` }}
+                                                transition={{ duration: 1.5, ease: "easeOut" }}
+                                            />
+                                        </div>
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
+                            <div className="corner-decor top-left"></div>
+                            <div className="corner-decor bottom-right"></div>
                         </motion.div>
                     ))}
                 </div>

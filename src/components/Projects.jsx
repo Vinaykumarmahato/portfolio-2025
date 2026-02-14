@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, Code, Layers } from 'lucide-react';
 import './Projects.css';
 
-const projectsData = [
+const projects = [
     {
         title: "Homemade Food Marketplace",
         image: "/img/home mad.png",
@@ -31,62 +31,66 @@ const projectsData = [
         desc: "Simulates real-world interviews using AI, helping users practice coding and system design.",
         stack: ["Java", "React", "OpenAI API", "MongoDB"],
         links: { github: "https://github.com/Vinaykumarmahato/AI-Mock-Interview-Platform" }
-    },
-    {
-        title: "50+ AI Frontend Websites",
-        image: "/img/50 project.png",
-        desc: "Collection of 50+ stunning frontend websites generated using AI design tools and modern web tech.",
-        stack: ["HTML", "CSS", "JS", "AI Tools"],
-        links: { github: "https://github.com/Vinaykumarmahato/Frontend-AI-Projects" }
     }
 ];
 
 const Projects = () => {
     return (
-        <section id="projects" className="projects-section">
+        <section id="projects" className="cyber-projects">
             <div className="container">
-                <motion.div
-                    className="section-header"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                <motion.h2
+                    className="section-title"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="section-title">Signature Projects</h2>
-                    <p className="section-subtitle">Highlighting impactful solutions and pioneering innovations.</p>
-                </motion.div>
+                    Project Archives
+                </motion.h2>
 
-                <div className="projects-grid">
-                    {projectsData.map((project, index) => (
+                <div className="projects-grid-3d">
+                    {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            className="project-card glass-panel"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            className="project-slate"
+                            initial={{ opacity: 0, y: 100, rotateX: 10 }}
+                            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            whileHover={{ y: -10 }}
+                            transition={{ delay: index * 0.1, type: "spring", stiffness: 50 }}
+                            whileHover={{
+                                scale: 1.05,
+                                rotateY: 5,
+                                boxShadow: "0 0 40px rgba(0, 243, 255, 0.2)"
+                            }}
                         >
-                            <div className="project-image-container">
-                                <img src={project.image} alt={project.title} className="project-image" />
-                                <div className="project-overlay">
-                                    <div className="project-links">
-                                        <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="icon-btn">
-                                            <Github size={20} />
-                                        </a>
-                                        {/* <a href="#" className="icon-btn"><ExternalLink size={20} /></a> */}
-                                    </div>
+                            <div className="slate-visual">
+                                <img src={project.image} alt={project.title} className="slate-img" />
+                                <div className="slate-overlay">
+                                    <a href={project.links.github} target="_blank" rel="noreferrer" className="cyber-btn-icon">
+                                        <Github />
+                                    </a>
+                                    <a href="#" className="cyber-btn-icon">
+                                        <ExternalLink />
+                                    </a>
                                 </div>
                             </div>
 
-                            <div className="project-content">
-                                <h3>{project.title}</h3>
-                                <p>{project.desc}</p>
-                                <div className="project-tags">
+                            <div className="slate-content">
+                                <h3 className="slate-title">{project.title}</h3>
+                                <p className="slate-desc">{project.desc}</p>
+
+                                <div className="slate-tech">
                                     {project.stack.map((tech, i) => (
-                                        <span key={i} className="tech-tag">{tech}</span>
+                                        <span key={i} className="tech-badge">
+                                            <Code size={12} /> {tech}
+                                        </span>
                                     ))}
                                 </div>
                             </div>
+
+                            <div className="slate-corner corner-1"></div>
+                            <div className="slate-corner corner-2"></div>
+                            <div className="slate-corner corner-3"></div>
+                            <div className="slate-corner corner-4"></div>
                         </motion.div>
                     ))}
                 </div>

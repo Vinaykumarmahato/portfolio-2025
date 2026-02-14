@@ -1,12 +1,12 @@
-/* Certificates Banner Styles */
+/* Cyber Certificate Banner */
 .certificates-banner {
     position: relative;
-    padding: 6rem 0;
+    padding: 8rem 0;
     margin: 4rem 0;
+    background: linear-gradient(90deg, rgba(188, 19, 254, 0.1), rgba(0, 243, 255, 0.1));
+    border-top: 2px solid var(--neon-purple);
+    border-bottom: 2px solid var(--neon-cyan);
     overflow: hidden;
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
 }
 
 .banner-content {
@@ -20,32 +20,37 @@
 }
 
 .banner-content h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: var(--hero-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    line-height: 1.2;
+    font-size: 3rem;
+    font-family: var(--font-tech);
+    color: #fff;
+    text-shadow: 0 0 20px var(--neon-purple);
+    z-index: 10;
 }
 
 .banner-btn {
-    background: white;
-    color: var(--primary);
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
+    background: transparent;
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    padding: 1rem 3rem;
+    font-family: var(--font-tech);
+    text-transform: uppercase;
+    letter-spacing: 2px;
     font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    gap: 15px;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
 }
 
 .banner-btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    background: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 30px var(--neon-cyan);
+    transform: scale(1.05);
 }
 
 .animated-squares {
@@ -54,37 +59,54 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
     pointer-events: none;
 }
 
 .sq {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    animation: float 8s infinite ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: float-rotate 10s infinite linear;
 }
 
 .sq-1 {
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
+    top: 10%;
+    left: 5%;
+    width: 50px;
+    height: 50px;
+    border-color: var(--neon-purple);
 }
 
 .sq-2 {
-    top: 60%;
-    right: 15%;
-    animation-delay: 2s;
-    width: 40px;
-    height: 40px;
+    top: 70%;
+    right: 10%;
+    width: 100px;
+    height: 100px;
+    border-color: var(--neon-cyan);
+    animation-duration: 15s;
 }
 
 .sq-3 {
-    top: 10%;
-    right: 25%;
-    animation-delay: 4s;
-    width: 80px;
-    height: 80px;
+    top: 20%;
+    right: 30%;
+    width: 30px;
+    height: 30px;
+    border-color: var(--neon-green);
+    animation-duration: 8s;
+}
+
+@keyframes float-rotate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0) rotate(360deg);
+        opacity: 0.5;
+    }
 }
