@@ -1,0 +1,34 @@
+/* Social Hub Section Styles */
+.social-hub-section {
+    padding: 6rem 0;
+    background-color: var(--bg-dark);
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.social-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: var(--surface-dark);
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-icon-wrapper {
+    font-size: 1.5rem;
+}
