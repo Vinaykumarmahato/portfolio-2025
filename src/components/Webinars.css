@@ -29,15 +29,18 @@
 
 .webinar-image {
     position: relative;
-    height: 180px;
+    width: 100%;
+    /* Ensure container takes full width */
     background: #000;
     overflow: hidden;
 }
 
 .webinar-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    /* Let height adjust to aspect ratio */
+    display: block;
+    /* Remove bottom whitespace */
     transition: transform 0.3s;
 }
 

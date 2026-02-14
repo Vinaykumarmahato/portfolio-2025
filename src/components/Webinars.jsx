@@ -11,7 +11,7 @@ const services = [
         originalPrice: "₹20,000",
         type: "Video meeting • 15 mins",
         tag: "Popular",
-        image: "/img/pro.png",
+        image: "/img/Webinar%20Image/Invite%20Guest%20Lecture.png",
         link: "https://topmate.io/vinaykumar"
     },
     {
@@ -20,7 +20,7 @@ const services = [
         price: "₹99",
         originalPrice: "₹999",
         type: "Video meeting • 45 mins",
-        image: "/img/Java Basics Bootcamp - Copy.png",
+        image: "/img/Webinar%20Image/Java%20Developer%20Guide.png",
         link: "https://topmate.io/vinaykumar"
     },
     {
@@ -30,7 +30,7 @@ const services = [
         originalPrice: "₹479",
         type: "Video meeting • 45 mins",
         rating: 5.0,
-        image: "/img/LinkedIn & GitHub Profile Webinar - Copy.png",
+        image: "/img/Webinar%20Image/Github%20Profile%20Optimisation.png",
         link: "https://topmate.io/vinaykumar"
     },
     {
@@ -41,7 +41,7 @@ const services = [
         type: "Video meeting • 30 mins",
         tag: "Popular",
         rating: 5.0,
-        image: "/img/devops.png", // Placeholder or generic
+        image: "/img/Webinar%20Image/DSA%20Perpration%20Guide.png",
         link: "https://topmate.io/vinaykumar"
     },
     {
@@ -51,7 +51,7 @@ const services = [
         originalPrice: "₹499",
         type: "Video meeting • 30 mins",
         rating: 5.0,
-        image: "/img/pro.png",
+        image: "/img/Webinar%20Image/1%20to%201%20Mentorship.png",
         link: "https://topmate.io/vinaykumar"
     },
     {
@@ -61,7 +61,7 @@ const services = [
         originalPrice: "₹499",
         type: "Video meeting • 30 mins",
         rating: 5.0,
-        image: "/img/about.png",
+        image: "/img/Webinar%20Image/Career%20Guidance.png",
         link: "https://topmate.io/vinaykumar"
     },
     {
@@ -71,7 +71,7 @@ const services = [
         originalPrice: "₹479",
         type: "Video meeting • 30 mins",
         rating: 5.0,
-        image: "/img/LinkedIn & GitHub Profile Webinar.png",
+        image: "/img/Webinar%20Image/Linkedin%20Profile%20Optimisation.png",
         link: "https://topmate.io/vinaykumar"
     },
     {
@@ -81,7 +81,7 @@ const services = [
         originalPrice: "₹999",
         type: "Video meeting • 15 mins",
         rating: 5.0,
-        image: "/img/requirements.png",
+        image: "/img/Webinar%20Image/How%20to%20crack%20Remote%20Job.png",
         link: "https://topmate.io/vinaykumar"
     },
     {
@@ -91,7 +91,7 @@ const services = [
         originalPrice: "₹499",
         type: "Priority DM • 1 day reply",
         rating: 4.7,
-        image: "/img/about image.png",
+        image: "/img/Webinar%20Image/ATS%20resume%20Review.png",
         link: "https://topmate.io/vinaykumar"
     },
     {
@@ -99,7 +99,7 @@ const services = [
         description: "Reach out for free calls and messages.",
         price: "FREE",
         type: "Priority DM",
-        image: "/img/logo.png",
+        image: "/img/Webinar%20Image/Free%20Call%20Message.png",
         link: "https://topmate.io/vinaykumar"
     }
 ];
