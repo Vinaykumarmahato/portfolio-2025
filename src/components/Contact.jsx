@@ -34,7 +34,7 @@ const Contact = () => {
                             <div className="icon-box"><Mail size={24} /></div>
                             <div>
                                 <h4>Email</h4>
-                                <p>vinay@example.com</p>
+                                <p><a href="mailto:vinaykumar860964@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>vinaykumar860964@gmail.com</a></p>
                             </div>
                         </div>
 

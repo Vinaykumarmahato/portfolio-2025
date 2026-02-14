@@ -12,6 +12,8 @@
   /* Deep void */
   --bg-grid: #0a0a2a;
   --surface-glass: rgba(10, 10, 30, 0.6);
+  --nav-bg: rgba(10, 10, 30, 0.85);
+  /* Navbar specific */
   --surface-border: rgba(255, 255, 255, 0.08);
 
   --text-primary: #ffffff;
@@ -24,11 +26,38 @@
   --glow-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
 }
 
+[data-theme='light'] {
+  /* Light Mode Cyber Palette - High Contrast */
+  --bg-deep: #f0f4f8;
+  /* Soft tech white/blue-grey */
+  --bg-grid: #e2e8f0;
+  --surface-glass: rgba(255, 255, 255, 0.75);
+  /* Frosty glass */
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --surface-border: rgba(0, 0, 0, 0.08);
+
+  --text-primary: #0f172a;
+  /* Slate 900 - Very dark blue/black */
+  --text-secondary: #475569;
+  /* Slate 600 */
+
+  /* Adjusted Neons for Light Background visibility */
+  --neon-cyan: #0891b2;
+  /* Darker Cyan */
+  --neon-purple: #7c3aed;
+  /* Darker Purple */
+  --neon-green: #65a30d;
+  /* Darker Lime */
+  --neon-pink: #e11d48;
+  /* Darker Pink */
+
+  --glow-shadow: 0 0 15px rgba(8, 145, 178, 0.2);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -41,6 +70,15 @@ body {
     linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
   background-size: 100% 100%, 40px 40px, 40px 40px;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Smooth transition */
+}
+
+[data-theme='light'] body {
+  background-image:
+    radial-gradient(circle at 50% 0%, #ffffff 0%, transparent 70%),
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
 }
 
 /* Scrollbar */

@@ -62,15 +62,15 @@ const Hero = () => {
                         <a href="#projects" className="btn-primary cyber-btn">
                             Explore Work <ArrowRight className="icon-pulse" size={20} />
                         </a>
-                        <a href="/resume.pdf" target="_blank" className="btn-secondary cyber-btn-outline">
+                        <a href="/Software%20Engineer%20Resume%20for%20Portfolio.pdf" target="_blank" className="btn-secondary cyber-btn-outline">
                             Download CV <Download size={20} />
                         </a>
                     </div>
 
                     <div className="hero-socials">
                         <a href="https://github.com/Vinaykumarmahato" target="_blank" className="social-glitch"><Github /></a>
-                        <a href="https://linkedin.com/in/vinay-kumar860964" target="_blank" className="social-glitch"><Linkedin /></a>
-                        <a href="mailto:vinay@example.com" className="social-glitch"><Mail /></a>
+                        <a href="https://www.linkedin.com/in/vinay-kumar860964/" target="_blank" className="social-glitch"><Linkedin /></a>
+                        <a href="mailto:vinaykumar860964@gmail.com" className="social-glitch"><Mail /></a>
                     </div>
                 </motion.div>
 
@@ -83,7 +83,7 @@ const Hero = () => {
                 >
                     <div className="holo-card">
                         <div className="scan-line"></div>
-                        <img src="/img/pro.jpg" alt="Vinay Kumar - Hologram" className="hero-img" />
+                        <img src="/img/pro.png" alt="Vinay Kumar - Hologram" className="hero-img" />
 
                         <div className="floating-stat stat-1 glass-panel">
                             <strong>500K+</strong> <small>Learners</small>

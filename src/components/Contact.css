@@ -2,19 +2,19 @@
 .contact-section {
     padding: 8rem 0;
     position: relative;
-    background: radial-gradient(circle at 50% 120%, rgba(0, 243, 255, 0.1), transparent 70%);
+    /* Removed hardcoded radial gradient to let body bg show through or handle via overlay */
 }
 
 .contact-container {
     display: grid;
     gap: 4rem;
     padding: 4rem;
-    background: rgba(10, 10, 30, 0.8);
+    background: var(--surface-glass);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(0, 243, 255, 0.2);
+    border: 1px solid var(--surface-border);
     border-radius: 4px;
     clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 968px) {
@@ -31,7 +31,7 @@
 
 .contact-info h3 {
     font-size: 2.5rem;
-    color: #fff;
+    color: var(--text-primary);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -47,10 +47,17 @@
     gap: 1.5rem;
     align-items: center;
     background: rgba(255, 255, 255, 0.03);
+    /* Keep subtle for dark, might need adjust for light */
     padding: 1.5rem;
     border-radius: 4px;
-    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border: 1px dashed var(--surface-border);
     transition: 0.3s;
+}
+
+/* Light mode override for info-item background if needed */
+[data-theme='light'] .info-item {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
 .info-item:hover {
@@ -74,7 +81,7 @@
 
 .info-item h4 {
     margin: 0;
-    color: #fff;
+    color: var(--text-primary);
     font-family: var(--font-tech);
     letter-spacing: 1px;
 }
@@ -94,14 +101,25 @@
 .form-group textarea {
     width: 100%;
     padding: 1.2rem;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    /* Dark, works for dark mode */
+    border: 1px solid var(--surface-border);
     color: #fff;
+    /* Force white text for dark input bg */
     font-family: var(--font-main);
     font-size: 1rem;
     outline: none;
     border-radius: 4px;
     transition: 0.3s;
+}
+
+/* Adapt inputs for light mode */
+[data-theme='light'] .form-group input,
+[data-theme='light'] .form-group textarea {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--text-primary);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .form-group input:focus,

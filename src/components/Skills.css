@@ -17,15 +17,17 @@
 .skill-module {
     padding: 2rem;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    background: linear-gradient(135deg, rgba(20, 20, 40, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%);
+    border: 1px solid var(--surface-border);
+    background: var(--surface-glass);
     transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .skill-module:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
-    border-color: rgba(0, 243, 255, 0.3);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--neon-cyan);
 }
 
 .module-header {
@@ -33,7 +35,7 @@
     align-items: center;
     gap: 1rem;
     margin-bottom: 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--surface-border);
     padding-bottom: 1rem;
 }
 
@@ -43,7 +45,7 @@
     background: rgba(0, 243, 255, 0.1);
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 10px var(--neon-cyan);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
 }
 
 .module-header h3 {
@@ -73,7 +75,8 @@
 .progress-track {
     width: 100%;
     height: 6px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--surface-border);
+    /* Adaptive track bg */
     border-radius: 3px;
     overflow: hidden;
     position: relative;

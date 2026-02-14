@@ -32,7 +32,7 @@ const Leadership = () => {
                                 <strong>10M+</strong> Views
                             </div>
                         </div>
-                        <a href="https://www.youtube.com/@ADVIndianCoder" target="_blank" rel="noopener noreferrer" className="btn-primary yt-btn">
+                        <a href="https://www.youtube.com/@ADVIndianCoder-i9y" target="_blank" rel="noopener noreferrer" className="btn-primary yt-btn">
                             Visit Channel
                         </a>
                     </div>

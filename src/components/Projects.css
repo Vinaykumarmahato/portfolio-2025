@@ -13,14 +13,15 @@
 }
 
 .project-slate {
-    background: rgba(10, 10, 30, 0.8);
+    background: var(--surface-glass);
     position: relative;
-    border: 1px solid rgba(0, 243, 255, 0.2);
+    border: 1px solid var(--surface-border);
     border-radius: 4px;
     padding: 10px;
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
     overflow: hidden;
     clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .slate-visual {
@@ -64,9 +65,11 @@
 .cyber-btn-icon {
     width: 50px;
     height: 50px;
-    border: 2px solid var(--neon-cyan);
+    border: 2px solid #00f3ff;
+    /* Keep bright cyan for overlay visibility */
     border-radius: 50%;
-    color: var(--neon-cyan);
+    color: #00f3ff;
+    /* Keep bright cyan */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,9 +78,9 @@
 }
 
 .cyber-btn-icon:hover {
-    background: var(--neon-cyan);
+    background: #00f3ff;
     color: #000;
-    box-shadow: 0 0 20px var(--neon-cyan);
+    box-shadow: 0 0 20px #00f3ff;
 }
 
 .slate-content {
@@ -86,7 +89,7 @@
 
 .slate-title {
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;

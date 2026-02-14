@@ -73,20 +73,20 @@
 
 /* Content Card */
 .timeline-content {
-    background: rgba(10, 10, 30, 0.8);
-    border: 1px solid rgba(188, 19, 254, 0.3);
+    background: var(--surface-glass);
+    border: 1px solid var(--surface-border);
     padding: 1.5rem;
     border-radius: 8px;
     position: relative;
     transition: 0.3s;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-content:hover {
     transform: translateY(-5px);
     border-color: var(--neon-purple);
-    box-shadow: 0 0 30px rgba(188, 19, 254, 0.2);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-date {
@@ -103,7 +103,7 @@
 .timeline-content h3 {
     margin: 0;
     font-size: 1.3rem;
-    color: #fff;
+    color: var(--text-primary);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
