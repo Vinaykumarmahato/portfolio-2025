@@ -1,0 +1,106 @@
+/* Fitness Page Styles */
+.fitness-page {
+    padding: 8rem 0;
+    min-height: 100vh;
+    background: var(--bg-dark);
+}
+
+.fitness-hero {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 6rem;
+    flex-wrap: wrap;
+}
+
+.fitness-text-content {
+    flex: 1;
+}
+
+.fitness-text-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: var(--hero-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.fitness-text-content p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.fitness-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.stat-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface-dark);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.stat-box svg {
+    color: var(--accent);
+}
+
+.fitness-hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.fitness-hero-img img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--accent);
+}
+
+.fitness-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 300px;
+    background: var(--surface-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.quote-card {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.quote-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    font-style: italic;
+    background: transparent;
+}

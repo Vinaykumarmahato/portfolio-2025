@@ -1,0 +1,81 @@
+/* Fitness Overview Section Styles */
+.fitness-overview-section {
+    padding: 6rem 0;
+    /* background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%); */
+    background: var(--bg-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.fitness-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+@media (max-width: 968px) {
+    .fitness-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+.fitness-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+@media (max-width: 968px) {
+    .fitness-text {
+        align-items: center;
+    }
+}
+
+.fitness-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fitness-icon {
+    color: var(--accent);
+    width: 48px;
+    height: 48px;
+}
+
+.fitness-text p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.fitness-image-wrapper {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--accent);
+    box-shadow: 0 0 40px rgba(255, 62, 108, 0.4);
+}
+
+.fitness-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fitness-btn {
+    background: var(--accent);
+    box-shadow: 0 4px 15px rgba(255, 62, 108, 0.3);
+}
+
+.fitness-btn:hover {
+    box-shadow: 0 8px 25px rgba(255, 62, 108, 0.4);
+    background: #e11d48;
+}

@@ -1,0 +1,100 @@
+/* Leadership (YouTube) Section Styles */
+.leadership-section {
+    padding: 6rem 0;
+    background: var(--bg-darker);
+    position: relative;
+    text-align: center;
+}
+
+.leadership-content {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(2, 6, 23, 0.6) 100%);
+    padding: 4rem 2rem;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.leadership-content::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #ff0000 0%, transparent 70%);
+    opacity: 0.1;
+    border-radius: 50%;
+    top: -50px;
+    left: -50px;
+    filter: blur(50px);
+}
+
+.leadership-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.yt-icon {
+    color: #ff0000;
+    font-size: 3rem;
+}
+
+.leadership-content h2 {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.leadership-content h3 {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin: 0;
+}
+
+.leadership-content p {
+    color: var(--text-muted);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.stat strong {
+    font-size: 1.5rem;
+    color: var(--primary);
+    display: block;
+}
+
+.yt-btn {
+    background: #ff0000;
+    border: none;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.yt-btn:hover {
+    background: #cc0000;
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+}
