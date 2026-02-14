@@ -1,0 +1,90 @@
+/* Certificates Banner Styles */
+.certificates-banner {
+    position: relative;
+    padding: 6rem 0;
+    margin: 4rem 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.banner-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--hero-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1.2;
+}
+
+.banner-btn {
+    background: white;
+    color: var(--primary);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.banner-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.animated-squares {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.sq {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    animation: float 8s infinite ease-in-out;
+}
+
+.sq-1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.sq-2 {
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+    width: 40px;
+    height: 40px;
+}
+
+.sq-3 {
+    top: 10%;
+    right: 25%;
+    animation-delay: 4s;
+    width: 80px;
+    height: 80px;
+}
