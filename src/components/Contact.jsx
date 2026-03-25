@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Send, MapPin, Phone, Mail } from 'lucide-react';
+import { Send, MapPin, Linkedin, Mail } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
@@ -26,7 +26,7 @@ const Contact = () => {
                             <div className="icon-box"><MapPin size={24} /></div>
                             <div>
                                 <h4>Location</h4>
-                                <p>India</p>
+                                <p>Bengaluru, India</p>
                             </div>
                         </div>
 
@@ -34,15 +34,15 @@ const Contact = () => {
                             <div className="icon-box"><Mail size={24} /></div>
                             <div>
                                 <h4>Email</h4>
-                                <p><a href="mailto:vinaykumar860964@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>vinaykumar860964@gmail.com</a></p>
+                                <p><a href="mailto:vinaytechnicaleh@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>vinaytechnicaleh@gmail.com</a></p>
                             </div>
                         </div>
 
                         <div className="info-item">
-                            <div className="icon-box"><Phone size={24} /></div>
+                            <div className="icon-box"><Linkedin size={24} /></div>
                             <div>
-                                <h4>Phone</h4>
-                                <p>+91 98765 43210</p>
+                                <h4>LinkedIn</h4>
+                                <p><a href="https://linkedin.com/in/vinaykumar860964" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>vinaykumar860964</a></p>
                             </div>
                         </div>
                     </div>

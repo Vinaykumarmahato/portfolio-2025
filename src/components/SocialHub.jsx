@@ -6,7 +6,7 @@ import './SocialHub.css';
 const socialLinks = [
     { name: "LinkedIn", icon: <Linkedin />, url: "https://www.linkedin.com/in/vinay-kumar860964/", color: "#0077b5" },
     { name: "GitHub", icon: <Github />, url: "https://github.com/Vinaykumarmahato", color: "#333" },
-    { name: "YouTube", icon: <Youtube />, url: "https://www.youtube.com/@ADVIndianCoder-i9y", color: "#ff0000" },
+    { name: "YouTube", icon: <Youtube />, url: "https://www.youtube.com/@ADVIndianCoder", color: "#ff0000" },
     { name: "Instagram", icon: <Instagram />, url: "https://www.instagram.com/vinay_software_engineer/", color: "#c13584" },
     { name: "Facebook", icon: <Facebook />, url: "https://www.facebook.com/vinay.software.engineer", color: "#1877f2" },
     { name: "Topmate", icon: <span style={{ fontSize: '1.2rem' }}>🤝</span>, url: "https://topmate.io/vinaykumar", color: "#00aaff" },

@@ -1,0 +1,204 @@
+.youtube-section {
+    padding: 8rem 0;
+    background: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.youtube-section .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.youtube-section .section-title {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.youtube-section .yt-icon-title {
+    color: #ff0000;
+    margin-right: 15px;
+    vertical-align: text-bottom;
+}
+
+.youtube-banner-container {
+    width: 100%;
+    margin-bottom: 4rem;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.yt-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.banner-info h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.banner-info p {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.yt-subscribe-btn {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.yt-subscribe-btn:hover {
+    background-color: #cc0000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.yt-video-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.yt-video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 0, 0, 0.5);
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    padding-top: 48%; /* Shrunk aspect ratio */
+    background: #000;
+}
+
+/* Fallback gradient if image not found */
+.video-thumbnail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460);
+    z-index: 0;
+}
+
+.video-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.yt-video-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-overlay svg {
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 10px rgba(255,0,0,0.8));
+    transition: transform 0.3s ease;
+}
+
+.yt-video-card:hover .play-overlay svg {
+    transform: scale(1.1);
+}
+
+.video-info {
+    padding: 1.5rem;
+}
+
+.video-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.video-desc {
+    color: var(--text-muted, #aaa);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.video-stats {
+    display: flex;
+    gap: 1rem;
+    color: #888;
+    font-size: 0.85rem;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .banner-overlay {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

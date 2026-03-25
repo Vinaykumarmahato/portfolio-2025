@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Code, Layers } from 'lucide-react';
 import './Projects.css';
@@ -35,6 +35,9 @@ const projects = [
 ];
 
 const Projects = () => {
+    const [showAll, setShowAll] = useState(false);
+    const displayedProjects = showAll ? projects : projects.slice(0, 3);
+
     return (
         <section id="projects" className="cyber-projects">
             <div className="container">
@@ -48,7 +51,7 @@ const Projects = () => {
                 </motion.h2>
 
                 <div className="projects-grid-3d">
-                    {projects.map((project, index) => (
+                    {displayedProjects.map((project, index) => (
                         <motion.div
                             key={index}
                             className="project-slate"
@@ -93,6 +96,17 @@ const Projects = () => {
                             <div className="slate-corner corner-4"></div>
                         </motion.div>
                     ))}
+                </div>
+
+                <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+                    <button 
+                        onClick={() => setShowAll(!showAll)}
+                        style={{ cursor: 'pointer', background: 'var(--neon-cyan)', color: '#000', border: 'none', padding: '12px 36px', fontSize: '1.1rem', fontWeight: 'bold', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '1px', transition: '0.3s' }}
+                        onMouseOver={(e) => {e.target.style.boxShadow = '0 0 15px var(--neon-cyan)'; e.target.style.transform = 'translateY(-2px)'}}
+                        onMouseOut={(e) => {e.target.style.boxShadow = 'none'; e.target.style.transform = 'translateY(0)'}}
+                    >
+                        {showAll ? 'View Less' : 'View More'}
+                    </button>
                 </div>
             </div>
         </section>

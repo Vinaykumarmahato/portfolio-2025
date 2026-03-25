@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
-import { ArrowRight, Download, PlayCircle, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Download, PlayCircle, Github, Linkedin, Mail, Youtube } from 'lucide-react';
 import PodcastPlayer from './PodcastPlayer';
 import './Hero.css';
 
@@ -42,7 +42,7 @@ const Hero = () => {
                     <h2 className="hero-role">
                         I am a <span className="typewriter-text">
                             <Typewriter
-                                words={['Java Full Stack Architect', 'AI Innovator', 'Global Educator', 'Founder @ Inoglle']}
+                                words={['Java Full Stack Architect', 'Educator @ ADV Indian Coder', 'AI Innovator', 'Founder @ Inoglle']}
                                 loop={0}
                                 cursor
                                 cursorStyle='_'
@@ -55,7 +55,7 @@ const Hero = () => {
 
                     <p className="hero-bio">
                         Architecting the future with scalable code and AI-driven solutions.
-                        Empowering <strong>500K+ learners</strong> worldwide while building the next generation of tech at <strong>Inoglle Technologies</strong>.
+                        Empowering <strong>10,000+ learners</strong> worldwide through my YouTube channel <strong>ADV Indian Coder</strong>, while building the next generation of tech at my IT startup, <strong>Inoglle</strong>.
                     </p>
 
                     <div className="hero-cta-group">
@@ -68,9 +68,10 @@ const Hero = () => {
                     </div>
 
                     <div className="hero-socials">
-                        <a href="https://github.com/Vinaykumarmahato" target="_blank" className="social-glitch"><Github /></a>
+                        <a href="https://www.youtube.com/@ADVIndianCoder" target="_blank" rel="noopener noreferrer" className="social-glitch"><Youtube /></a>
+                        <a href="https://github.com/Vinaykumarmahato" target="_blank" rel="noopener noreferrer" className="social-glitch"><Github /></a>
                         <a href="https://www.linkedin.com/in/vinay-kumar860964/" target="_blank" className="social-glitch"><Linkedin /></a>
-                        <a href="mailto:vinaykumar860964@gmail.com" className="social-glitch"><Mail /></a>
+                        <a href="mailto:vinaytechnicaleh@gmail.com" className="social-glitch"><Mail /></a>
                     </div>
                 </motion.div>
 
@@ -86,7 +87,7 @@ const Hero = () => {
                         <img src="/img/pro.png" alt="Vinay Kumar - Hologram" className="hero-img" />
 
                         <div className="floating-stat stat-1 glass-panel">
-                            <strong>500K+</strong> <small>Learners</small>
+                            <strong>10K+</strong> <small>Learners</small>
                         </div>
                         <div className="floating-stat stat-2 glass-panel">
                             <strong>CEO</strong> <small>Inoglle</small>

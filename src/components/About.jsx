@@ -30,7 +30,7 @@ const About = () => {
             icon: <Zap />,
             title: "IMPACT METRICS",
             subtitle: "Scalability & Efficiency",
-            desc: "40% delivery speed boost, 500K+ learners.",
+            desc: "40% delivery speed boost, 10,000+ beneficiaries.",
             color: "var(--neon-pink)"
         }
     ];
@@ -72,14 +72,15 @@ const About = () => {
                         </div>
                         <p>
                             Initializing <strong>Vinay Kumar Mahato</strong>... <br /><br />
-                            A visionary Technologist and Educator architecting the digital future. As the <strong>Founder of Inoglle</strong>, I don't just write code; I build ecosystems that empower businesses and learners alike.
+                            A visionary Technologist and Educator architecting the digital future. As the <strong>Founder of my IT startup, Inoglle</strong>, I don't just write code; I build ecosystems that empower businesses and learners alike.
                         </p>
                         <p>
-                            My mission is to democratize technology education through <strong>ADV Indian Coder</strong>, bridging the gap between complex algorithms and real-world application. From optimizing enterprise-grade backend systems to mentoring the next wave of developers, I operate at the intersection of innovation and impact.
+                            My core philosophy is simple: focus on strong fundamentals, learn by building real projects, and bridge the gap between learning and job readiness—especially for Tier 2/3 students. Through <strong>ADV Indian Coder</strong> and <strong>Inoglle</strong>, I operate at the intersection of innovation and impact. <br /><br />
+                            <em>Vision: “Today Java. Tomorrow AI. But first — a solid foundation.”</em>
                         </p>
                         <div className="bio-footer">
                             <span>STATUS: <span className="status-online">ONLINE</span></span>
-                            <span>LOC: INDIA</span>
+                            <span>LOC: BENGALURU, INDIA</span>
                         </div>
                     </motion.div>
 

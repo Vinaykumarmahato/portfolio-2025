@@ -117,8 +117,6 @@
 
 .hero-bio strong {
     color: var(--text-primary);
-    text-decoration: underline wavy var(--neon-pink);
-    text-underline-offset: 4px;
 }
 
 /* Buttons */

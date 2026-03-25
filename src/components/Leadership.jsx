@@ -23,16 +23,16 @@ const Leadership = () => {
                         </p>
                         <div className="stats-row">
                             <div className="stat">
-                                <strong>500K+</strong> Subscribers
+                                <strong>406+</strong> Subscribers
                             </div>
                             <div className="stat">
-                                <strong>300+</strong> Tutorials
+                                <strong>54+</strong> Videos Created
                             </div>
                             <div className="stat">
-                                <strong>10M+</strong> Views
+                                <strong>500+</strong> Students Mentored
                             </div>
                         </div>
-                        <a href="https://www.youtube.com/@ADVIndianCoder-i9y" target="_blank" rel="noopener noreferrer" className="btn-primary yt-btn">
+                        <a href="https://www.youtube.com/@ADVIndianCoder" target="_blank" rel="noopener noreferrer" className="btn-primary yt-btn">
                             Visit Channel
                         </a>
                     </div>

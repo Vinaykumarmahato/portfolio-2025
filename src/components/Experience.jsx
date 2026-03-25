@@ -6,39 +6,39 @@ import './Experience.css';
 const experienceData = [
     {
         role: "Founder & CEO",
-        company: "Inoglle Technologies",
-        period: "Feb 2024 – Present",
-        desc: "Leading full-stack development & IT consulting. Improved client scalability by 25%. Launched internship programs for 100+ learners."
+        company: "Inoglle",
+        period: "2024 – Present",
+        desc: "Leading full-stack development & IT consulting. Trained 100+ developers and achieved a 40% efficiency improvement."
+    },
+    {
+        role: "Founder",
+        company: "ADV HopeHaven",
+        period: "2024 – Present",
+        desc: "Launched ongoing social initiative that has conducted 50+ programs impacting over 10,000 beneficiaries."
+    },
+    {
+        role: "Java & Web Developer",
+        company: "PW Skills, CodeSoft, InternBug, OctaNet",
+        period: "2023",
+        desc: "Built scalable applications, focused on both robust backend architecture and dynamic frontend interfaces."
+    },
+    {
+        role: "Founder & Creator",
+        company: "ADV Indian Coder",
+        period: "2022 – Present",
+        desc: "Teaching Project-based Java in Hinglish. Launched Java Full Course. Mentored 500+ students & assisted 2,000+ job placements."
     },
     {
         role: "Technical Lead",
-        company: "ADV SparkTech (GDSC Chapter)",
-        period: "Jan 2024 – Present",
-        desc: "Organized 10+ workshops, guided 500+ students in real-world projects, led career mentoring sessions."
+        company: "GDSC ADV SparkTech",
+        period: "2021",
+        desc: "Organized 10+ hackathons and guided 500+ students in real-world projects during BTech at Anna University."
     },
     {
-        role: "Founder & Educator",
-        company: "ADV Indian Coder",
-        period: "Jan 2022 – Present",
-        desc: "Created 150+ tutorials, 50K+ subscribers, helping 2000+ learners get certified."
-    },
-    {
-        role: "Director",
-        company: "ADV HopeHaven (NGO)",
-        period: "Jan 2024 – Aug 2024",
-        desc: "Led 50+ outreach programs impacting 10,000+ lives. Built national volunteer network."
-    },
-    {
-        role: "Freelance Developer",
-        company: "Upwork",
-        period: "Dec 2023 – May 2024",
-        desc: "Authored 50+ technical articles, developed full-stack apps for global clients."
-    },
-    {
-        role: "Java Developer Intern",
-        company: "PW Skills, InternBug, LetsGrowMore",
-        period: "Feb 2023 – Aug 2023",
-        desc: "Developed scalable Java apps, collaborated in Agile environments."
+        role: "Educator (Physics & English)",
+        company: "Mashrakh, Saran (Bihar)",
+        period: "2017",
+        desc: "Started teaching at the age of 17, establishing a foundation of making education accessible early on."
     }
 ];
 
